@@ -1,0 +1,27 @@
+{
+  "id": "module1/ros2-architecture",
+  "title": "ROS 2 Architecture",
+  "description": "System Components",
+  "source": "@site/docs/module1/ros2-architecture.md",
+  "sourceDirName": "module1",
+  "slug": "/module1/ros2-architecture",
+  "permalink": "/docs/module1/ros2-architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module1/ros2-architecture.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ROS 2 Concepts",
+    "permalink": "/docs/module1/ros2-concepts"
+  },
+  "next": {
+    "title": "ROS 2 Packages",
+    "permalink": "/docs/module1/ros2-packages"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "capstone/implementation",
+  "title": "Capstone Implementation",
+  "description": "This section covers the detailed implementation of the autonomous humanoid project.",
+  "source": "@site/docs/capstone/implementation.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/implementation",
+  "permalink": "/docs/capstone/implementation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/capstone/implementation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone Project Requirements",
+    "permalink": "/docs/capstone/project-requirements"
+  },
+  "next": {
+    "title": "Capstone Results and Evaluation",
+    "permalink": "/docs/capstone/results"
+  }
+}

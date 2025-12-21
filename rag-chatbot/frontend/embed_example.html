@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chatbot Embed Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .book-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Physical AI and Humanoid Robotics Textbook</h1>
+
+    <div class="book-content">
+        <h2>Chapter 1: Introduction to Physical AI</h2>
+        <p>Physical AI represents a paradigm shift in artificial intelligence, moving beyond abstract algorithms to embodied intelligence that interacts with the real world. This approach is crucial for developing truly capable humanoid robots and autonomous systems.</p>
+
+        <p>The embodiment principle suggests that intelligence emerges from the interaction between an agent and its environment. Traditional AI systems operate in virtual environments, processing data without the constraints of physical reality. Physical AI, however, must navigate the complexities of the physical world, including real-time constraints, uncertainty and noise, energy efficiency, and safety considerations.</p>
+
+        <h3>Applications of Physical AI</h3>
+        <p>Physical AI has transformative applications across multiple domains:</p>
+        <ul>
+            <li>Healthcare Robotics: Assistive robots for elderly care, surgical robots with enhanced precision, rehabilitation devices</li>
+            <li>Industrial Automation: Collaborative robots (cobots) working alongside humans, adaptive manufacturing systems, quality inspection robots</li>
+            <li>Service Robotics: Autonomous delivery systems, customer service robots, cleaning and maintenance robots</li>
+        </ul>
+
+        <p>These applications demonstrate the potential of physical AI to enhance human capabilities and improve quality of life. The integration of perception, planning, and control in real-time systems enables robots to operate effectively in dynamic environments.</p>
+    </div>
+
+    <p>Select any text above and then click the chat icon to ask questions about the content using the RAG chatbot!</p>
+
+    <!-- RAG Chatbot Widget will be embedded here -->
+    <div data-rag-chat
+         data-api-url="http://localhost:8000"
+         data-book-id="physical-ai-textbook"
+         data-container-id="rag-chat-container">
+    </div>
+
+    <!-- Include the RAG Chatbot Widget -->
+    <script src="chat_widget.js"></script>
+</body>
+</html>

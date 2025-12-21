@@ -1,0 +1,27 @@
+{
+  "id": "module2/gazebo-simulation",
+  "title": "Gazebo Simulation",
+  "description": "Overview",
+  "source": "@site/docs/module2/gazebo-simulation.md",
+  "sourceDirName": "module2",
+  "slug": "/module2/gazebo-simulation",
+  "permalink": "/docs/module2/gazebo-simulation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module2/gazebo-simulation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 2: The Digital Twin (Gazebo & Unity)",
+    "permalink": "/docs/module2/introduction"
+  },
+  "next": {
+    "title": "Unity Integration",
+    "permalink": "/docs/module2/unity-integration"
+  }
+}

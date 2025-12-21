@@ -1,0 +1,27 @@
+{
+  "id": "module3/isaac-architecture",
+  "title": "Isaac Architecture",
+  "description": "Platform Overview",
+  "source": "@site/docs/module3/isaac-architecture.md",
+  "sourceDirName": "module3",
+  "slug": "/module3/isaac-architecture",
+  "permalink": "/docs/module3/isaac-architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module3/isaac-architecture.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 3: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/docs/module3/introduction"
+  },
+  "next": {
+    "title": "AI Models",
+    "permalink": "/docs/module3/ai-models"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "capstone/project-requirements",
+  "title": "Capstone Project Requirements",
+  "description": "System Architecture Requirements",
+  "source": "@site/docs/capstone/project-requirements.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/project-requirements",
+  "permalink": "/docs/capstone/project-requirements",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/capstone/project-requirements.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone Project - Autonomous Humanoid Robot",
+    "permalink": "/docs/capstone/introduction"
+  },
+  "next": {
+    "title": "Capstone Implementation",
+    "permalink": "/docs/capstone/implementation"
+  }
+}

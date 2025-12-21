@@ -1,0 +1,27 @@
+{
+  "id": "lab-architecture/local-setup",
+  "title": "Local Setup Architecture",
+  "description": "Overview",
+  "source": "@site/docs/lab-architecture/local-setup.md",
+  "sourceDirName": "lab-architecture",
+  "slug": "/lab-architecture/local-setup",
+  "permalink": "/docs/lab-architecture/local-setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/lab-architecture/local-setup.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Actuator Specifications",
+    "permalink": "/docs/hardware/actuator-specifications"
+  },
+  "next": {
+    "title": "Cloud Architecture Options",
+    "permalink": "/docs/lab-architecture/cloud-options"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "hardware/introduction",
+  "title": "Hardware Requirements Overview",
+  "description": "Introduction",
+  "source": "@site/docs/hardware/introduction.md",
+  "sourceDirName": "hardware",
+  "slug": "/hardware/introduction",
+  "permalink": "/docs/hardware/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/hardware/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Assessment Rubrics",
+    "permalink": "/docs/assessments/rubrics"
+  },
+  "next": {
+    "title": "Compute Requirements",
+    "permalink": "/docs/hardware/compute-requirements"
+  }
+}

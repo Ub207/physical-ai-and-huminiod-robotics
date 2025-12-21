@@ -1,0 +1,27 @@
+{
+  "id": "hardware/actuator-specifications",
+  "title": "Actuator Specifications",
+  "description": "Overview",
+  "source": "@site/docs/hardware/actuator-specifications.md",
+  "sourceDirName": "hardware",
+  "slug": "/hardware/actuator-specifications",
+  "permalink": "/docs/hardware/actuator-specifications",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/hardware/actuator-specifications.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Sensor Specifications",
+    "permalink": "/docs/hardware/sensor-specifications"
+  },
+  "next": {
+    "title": "Local Setup Architecture",
+    "permalink": "/docs/lab-architecture/local-setup"
+  }
+}

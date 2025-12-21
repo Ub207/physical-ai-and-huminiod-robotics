@@ -1,0 +1,27 @@
+{
+  "id": "weekly-breakdown/week-1-2",
+  "title": "Week 1-2: Foundations of Physical AI",
+  "description": "Learning Objectives",
+  "source": "@site/docs/weekly-breakdown/week-1-2.md",
+  "sourceDirName": "weekly-breakdown",
+  "slug": "/weekly-breakdown/week-1-2",
+  "permalink": "/docs/weekly-breakdown/week-1-2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/weekly-breakdown/week-1-2.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Learning Outcomes",
+    "permalink": "/docs/learning-outcomes"
+  },
+  "next": {
+    "title": "Week 3-4: Robotic Nervous System (ROS 2)",
+    "permalink": "/docs/weekly-breakdown/week-3-4"
+  }
+}

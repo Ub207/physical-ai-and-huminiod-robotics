@@ -1,0 +1,27 @@
+{
+  "id": "module3/robot-control",
+  "title": "Robot Control",
+  "description": "Overview",
+  "source": "@site/docs/module3/robot-control.md",
+  "sourceDirName": "module3",
+  "slug": "/module3/robot-control",
+  "permalink": "/docs/module3/robot-control",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module3/robot-control.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI Models",
+    "permalink": "/docs/module3/ai-models"
+  },
+  "next": {
+    "title": "Module 4: Vision-Language-Action (VLA)",
+    "permalink": "/docs/module4/introduction"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "module4/conversational-robotics",
+  "title": "Conversational Robotics",
+  "description": "Overview",
+  "source": "@site/docs/module4/conversational-robotics.md",
+  "sourceDirName": "module4",
+  "slug": "/module4/conversational-robotics",
+  "permalink": "/docs/module4/conversational-robotics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module4/conversational-robotics.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "VLA Models",
+    "permalink": "/docs/module4/vla-models"
+  },
+  "next": {
+    "title": "VLA Exercises",
+    "permalink": "/docs/module4/vla-exercises"
+  }
+}

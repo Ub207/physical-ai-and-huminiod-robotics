@@ -1,0 +1,27 @@
+{
+  "id": "module1/ros2-concepts",
+  "title": "ROS 2 Concepts",
+  "description": "Core Architecture",
+  "source": "@site/docs/module1/ros2-concepts.md",
+  "sourceDirName": "module1",
+  "slug": "/module1/ros2-concepts",
+  "permalink": "/docs/module1/ros2-concepts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module1/ros2-concepts.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1: The Robotic Nervous System (ROS 2)",
+    "permalink": "/docs/module1/introduction"
+  },
+  "next": {
+    "title": "ROS 2 Architecture",
+    "permalink": "/docs/module1/ros2-architecture"
+  }
+}

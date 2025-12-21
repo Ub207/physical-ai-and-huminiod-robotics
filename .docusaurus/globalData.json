@@ -1,0 +1,228 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "introduction",
+          "docs": [
+            {
+              "id": "assessments/introduction",
+              "path": "/docs/assessments/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "assessments/midterm",
+              "path": "/docs/assessments/midterm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "assessments/rubrics",
+              "path": "/docs/assessments/rubrics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "capstone/implementation",
+              "path": "/docs/capstone/implementation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "capstone/introduction",
+              "path": "/docs/capstone/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "capstone/project-requirements",
+              "path": "/docs/capstone/project-requirements",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "capstone/results",
+              "path": "/docs/capstone/results",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "hardware/actuator-specifications",
+              "path": "/docs/hardware/actuator-specifications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "hardware/compute-requirements",
+              "path": "/docs/hardware/compute-requirements",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "hardware/introduction",
+              "path": "/docs/hardware/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "hardware/sensor-specifications",
+              "path": "/docs/hardware/sensor-specifications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "introduction",
+              "path": "/docs/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "lab-architecture/cloud-options",
+              "path": "/docs/lab-architecture/cloud-options",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "lab-architecture/containerization",
+              "path": "/docs/lab-architecture/containerization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "lab-architecture/local-setup",
+              "path": "/docs/lab-architecture/local-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "learning-outcomes",
+              "path": "/docs/learning-outcomes",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module1/introduction",
+              "path": "/docs/module1/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module1/ros2-architecture",
+              "path": "/docs/module1/ros2-architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module1/ros2-concepts",
+              "path": "/docs/module1/ros2-concepts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module1/ros2-exercises",
+              "path": "/docs/module1/ros2-exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module1/ros2-packages",
+              "path": "/docs/module1/ros2-packages",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module2/digital-twin-exercises",
+              "path": "/docs/module2/digital-twin-exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module2/gazebo-simulation",
+              "path": "/docs/module2/gazebo-simulation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module2/introduction",
+              "path": "/docs/module2/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module2/unity-integration",
+              "path": "/docs/module2/unity-integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module3/ai-models",
+              "path": "/docs/module3/ai-models",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module3/introduction",
+              "path": "/docs/module3/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module3/isaac-architecture",
+              "path": "/docs/module3/isaac-architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module3/robot-control",
+              "path": "/docs/module3/robot-control",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module4/conversational-robotics",
+              "path": "/docs/module4/conversational-robotics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module4/introduction",
+              "path": "/docs/module4/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module4/vla-exercises",
+              "path": "/docs/module4/vla-exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module4/vla-models",
+              "path": "/docs/module4/vla-models",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "weekly-breakdown/week-1-2",
+              "path": "/docs/weekly-breakdown/week-1-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "weekly-breakdown/week-11-12",
+              "path": "/docs/weekly-breakdown/week-11-12",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "weekly-breakdown/week-3-4",
+              "path": "/docs/weekly-breakdown/week-3-4",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "weekly-breakdown/week-5-6",
+              "path": "/docs/weekly-breakdown/week-5-6",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "weekly-breakdown/week-7-8",
+              "path": "/docs/weekly-breakdown/week-7-8",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "weekly-breakdown/week-9-10",
+              "path": "/docs/weekly-breakdown/week-9-10",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "why-physical-ai-matters",
+              "path": "/docs/why-physical-ai-matters",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/introduction",
+                "label": "introduction"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

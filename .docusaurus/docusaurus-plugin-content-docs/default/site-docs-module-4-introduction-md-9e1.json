@@ -1,0 +1,27 @@
+{
+  "id": "module4/introduction",
+  "title": "Module 4: Vision-Language-Action (VLA)",
+  "description": "Overview",
+  "source": "@site/docs/module4/introduction.md",
+  "sourceDirName": "module4",
+  "slug": "/module4/introduction",
+  "permalink": "/docs/module4/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module4/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Robot Control",
+    "permalink": "/docs/module3/robot-control"
+  },
+  "next": {
+    "title": "VLA Models",
+    "permalink": "/docs/module4/vla-models"
+  }
+}

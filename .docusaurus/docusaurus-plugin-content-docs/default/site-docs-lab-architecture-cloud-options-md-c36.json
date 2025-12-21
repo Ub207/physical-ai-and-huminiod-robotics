@@ -1,0 +1,27 @@
+{
+  "id": "lab-architecture/cloud-options",
+  "title": "Cloud Architecture Options",
+  "description": "Overview",
+  "source": "@site/docs/lab-architecture/cloud-options.md",
+  "sourceDirName": "lab-architecture",
+  "slug": "/lab-architecture/cloud-options",
+  "permalink": "/docs/lab-architecture/cloud-options",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/lab-architecture/cloud-options.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Local Setup Architecture",
+    "permalink": "/docs/lab-architecture/local-setup"
+  },
+  "next": {
+    "title": "Containerization for Robotics",
+    "permalink": "/docs/lab-architecture/containerization"
+  }
+}

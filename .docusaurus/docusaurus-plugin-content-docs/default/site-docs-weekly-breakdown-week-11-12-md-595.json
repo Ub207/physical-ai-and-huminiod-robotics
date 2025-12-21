@@ -1,0 +1,27 @@
+{
+  "id": "weekly-breakdown/week-11-12",
+  "title": "Week 11-12: Vision-Language-Action (VLA) & Capstone Preparation",
+  "description": "Learning Objectives",
+  "source": "@site/docs/weekly-breakdown/week-11-12.md",
+  "sourceDirName": "weekly-breakdown",
+  "slug": "/weekly-breakdown/week-11-12",
+  "permalink": "/docs/weekly-breakdown/week-11-12",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/weekly-breakdown/week-11-12.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 9-10: AI-Robot Brain (NVIDIA Isaac)",
+    "permalink": "/docs/weekly-breakdown/week-9-10"
+  },
+  "next": {
+    "title": "Module 1: The Robotic Nervous System (ROS 2)",
+    "permalink": "/docs/module1/introduction"
+  }
+}

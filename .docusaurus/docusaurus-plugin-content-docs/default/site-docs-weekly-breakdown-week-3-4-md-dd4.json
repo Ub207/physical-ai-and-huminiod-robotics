@@ -1,0 +1,27 @@
+{
+  "id": "weekly-breakdown/week-3-4",
+  "title": "Week 3-4: Robotic Nervous System (ROS 2)",
+  "description": "Learning Objectives",
+  "source": "@site/docs/weekly-breakdown/week-3-4.md",
+  "sourceDirName": "weekly-breakdown",
+  "slug": "/weekly-breakdown/week-3-4",
+  "permalink": "/docs/weekly-breakdown/week-3-4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/weekly-breakdown/week-3-4.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 1-2: Foundations of Physical AI",
+    "permalink": "/docs/weekly-breakdown/week-1-2"
+  },
+  "next": {
+    "title": "Week 5-6: Digital Twin Fundamentals (Gazebo)",
+    "permalink": "/docs/weekly-breakdown/week-5-6"
+  }
+}

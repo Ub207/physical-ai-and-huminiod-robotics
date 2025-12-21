@@ -1,0 +1,37 @@
+{
+  "id": "capstone/introduction",
+  "title": "Capstone Project - Autonomous Humanoid Robot",
+  "description": "Comprehensive capstone project integrating all Physical AI concepts",
+  "source": "@site/docs/capstone/introduction.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/introduction",
+  "permalink": "/docs/capstone/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/capstone/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Capstone Project - Autonomous Humanoid Robot",
+    "description": "Comprehensive capstone project integrating all Physical AI concepts",
+    "keywords": [
+      "capstone",
+      "humanoid robot",
+      "autonomous",
+      "integration",
+      "physical ai",
+      "robotics"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "VLA Exercises",
+    "permalink": "/docs/module4/vla-exercises"
+  },
+  "next": {
+    "title": "Capstone Project Requirements",
+    "permalink": "/docs/capstone/project-requirements"
+  }
+}

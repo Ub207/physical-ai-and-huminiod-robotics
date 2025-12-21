@@ -1,0 +1,27 @@
+{
+  "id": "capstone/results",
+  "title": "Capstone Results and Evaluation",
+  "description": "This section covers the evaluation and results of the autonomous humanoid project.",
+  "source": "@site/docs/capstone/results.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/results",
+  "permalink": "/docs/capstone/results",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/capstone/results.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone Implementation",
+    "permalink": "/docs/capstone/implementation"
+  },
+  "next": {
+    "title": "Assessments Overview",
+    "permalink": "/docs/assessments/introduction"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "module3/ai-models",
+  "title": "AI Models",
+  "description": "Overview",
+  "source": "@site/docs/module3/ai-models.md",
+  "sourceDirName": "module3",
+  "slug": "/module3/ai-models",
+  "permalink": "/docs/module3/ai-models",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module3/ai-models.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Isaac Architecture",
+    "permalink": "/docs/module3/isaac-architecture"
+  },
+  "next": {
+    "title": "Robot Control",
+    "permalink": "/docs/module3/robot-control"
+  }
+}

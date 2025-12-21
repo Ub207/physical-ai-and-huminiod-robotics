@@ -1,0 +1,27 @@
+{
+  "id": "why-physical-ai-matters",
+  "title": "Why Physical AI Matters",
+  "description": "Physical AI represents a paradigm shift in artificial intelligence, moving beyond abstract algorithms to embodied intelligence that interacts with the real world. This approach is crucial for developing truly capable humanoid robots and autonomous systems.",
+  "source": "@site/docs/why-physical-ai-matters.md",
+  "sourceDirName": ".",
+  "slug": "/why-physical-ai-matters",
+  "permalink": "/docs/why-physical-ai-matters",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/why-physical-ai-matters.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/introduction"
+  },
+  "next": {
+    "title": "Learning Outcomes",
+    "permalink": "/docs/learning-outcomes"
+  }
+}

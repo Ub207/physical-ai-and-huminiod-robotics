@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chatbot Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .book-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4f46e5;
+        }
+        h2, h3 {
+            color: #4f46e5;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .instructions {
+            background: #fffbeb;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+        }
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Physical AI and Humanoid Robotics Textbook</h1>
+
+        <div class="instructions">
+            <h3>💡 How to use the RAG Chatbot:</h3>
+            <ul>
+                <li>Select any text in the book content below</li>
+                <li>Click the chat icon (💬) that appears</li>
+                <li>Ask questions about the selected text or the entire book</li>
+                <li>The chatbot will use both the selected text and the full book context</li>
+            </ul>
+        </div>
+
+        <div class="book-content">
+            <h2>Chapter 1: Introduction to Physical AI</h2>
+            <p>Physical AI represents a paradigm shift in artificial intelligence, moving beyond abstract algorithms to embodied intelligence that interacts with the real world. This approach is crucial for developing truly capable humanoid robots and autonomous systems.</p>
+
+            <p>The embodiment principle suggests that intelligence emerges from the interaction between an agent and its environment. Traditional AI systems operate in virtual environments, processing data without the constraints of physical reality. Physical AI, however, must navigate the complexities of the physical world, including real-time constraints, uncertainty and noise, energy efficiency, and safety considerations.</p>
+
+            <h3>Applications of Physical AI</h3>
+            <p>Physical AI has transformative applications across multiple domains:</p>
+            <ul>
+                <li><strong>Healthcare Robotics</strong>: Assistive robots for elderly care, surgical robots with enhanced precision, rehabilitation devices</li>
+                <li><strong>Industrial Automation</strong>: Collaborative robots (cobots) working alongside humans, adaptive manufacturing systems, quality inspection robots</li>
+                <li><strong>Service Robotics</strong>: Autonomous delivery systems, customer service robots, cleaning and maintenance robots</li>
+            </ul>
+
+            <p>These applications demonstrate the potential of physical AI to enhance human capabilities and improve quality of life. The integration of perception, planning, and control in real-time systems enables robots to operate effectively in dynamic environments.</p>
+        </div>
+
+        <div class="book-content">
+            <h2>Chapter 2: The Robotic Nervous System (ROS 2)</h2>
+            <p>The Robot Operating System 2 (ROS 2) serves as the nervous system for modern robotic platforms, providing the communication infrastructure, hardware abstraction, and tooling necessary for complex robotic applications. This module introduces the fundamental concepts of ROS 2 and demonstrates how to build robust, distributed robotic systems.</p>
+
+            <p>ROS 2 is built on a distributed system architecture that enables communication between processes (nodes) running on potentially different devices. The key architectural concepts include:</p>
+            <ul>
+                <li><strong>Nodes</strong>: The fundamental execution units in ROS 2</li>
+                <li><strong>Topics</strong>: Unidirectional communication patterns</li>
+                <li><strong>Services</strong>: Request-response communication patterns</li>
+                <li><strong>Actions</strong>: Goal-oriented communication patterns</li>
+            </ul>
+
+            <p>The system provides hardware abstraction, device drivers, libraries, visualization tools, message passing, and package management, making it a comprehensive framework for robotic software development.</p>
+        </div>
+
+        <div class="book-content">
+            <h2>Chapter 3: Digital Twin (Gazebo & Unity)</h2>
+            <p>Digital twins provide virtual replicas of physical systems, enabling safe testing, validation, and optimization of robotic systems before deployment. This module explores two leading simulation platforms: Gazebo for physics-based simulation and Unity for advanced visualization and immersive environments.</p>
+
+            <p>Key components of digital twin systems include:</p>
+            <ul>
+                <li><strong>Physics Engine</strong>: Realistic simulation of robotic behavior</li>
+                <li><strong>Sensor Simulation</strong>: Accurate modeling of various sensors</li>
+                <li><strong>Model Format</strong>: Standardized representation of robotic systems</li>
+                <li><strong>Integration Patterns</strong>: Seamless connection with ROS 2 systems</li>
+            </ul>
+
+            <p>The benefits of digital twins in robotics include safe testing environments, cost reduction, scenario simulation, performance optimization, and validation of sim-to-real transfer.</p>
+        </div>
+
+        <div class="book-content">
+            <h2>Chapter 4: AI-Robot Brain (NVIDIA Isaac™)</h2>
+            <p>The AI-Robot Brain represents the cognitive layer of robotic systems, where artificial intelligence algorithms process sensor data, make decisions, and generate control commands. NVIDIA Isaac provides a comprehensive platform for developing, simulating, and deploying AI-powered robotic applications with high performance and efficiency.</p>
+
+            <p>Key components of the Isaac platform include:</p>
+            <ul>
+                <li><strong>Isaac ROS</strong>: GPU-accelerated ROS 2 packages</li>
+                <li><strong>Isaac Sim</strong>: High-fidelity simulation environment</li>
+                <li><strong>Isaac Apps</strong>: Pre-built reference applications</li>
+                <li><strong>Isaac Core</strong>: Fundamental robotics libraries</li>
+            </ul>
+
+            <p>The platform addresses key challenges in robotics including perception, planning, control, and integration challenges with hardware acceleration for real-time performance.</p>
+        </div>
+
+        <div class="book-content">
+            <h2>Chapter 5: Vision-Language-Action (VLA)</h2>
+            <p>Vision-Language-Action (VLA) systems represent the next frontier in robotics, enabling robots to understand natural language commands, perceive their environment visually, and execute complex actions. This module explores the integration of vision, language, and action systems to create conversational robots capable of complex task execution.</p>
+
+            <p>VLA systems combine three critical capabilities:</p>
+            <ul>
+                <li><strong>Vision</strong>: Understanding the visual environment</li>
+                <li><strong>Language</strong>: Processing natural language commands and queries</li>
+                <li><strong>Action</strong>: Executing physical actions in the environment</li>
+            </ul>
+
+            <p>This integration enables robots to interpret natural language commands in visual contexts, perform complex tasks based on verbal instructions, engage in natural conversations about their environment, and learn new tasks through language-guided interaction.</p>
+        </div>
+
+        <p style="text-align: center; color: #666; margin-top: 30px;">
+            Select any text above and click the chat icon to ask questions about the content!
+        </p>
+    </div>
+
+    <!-- RAG Chatbot Widget will be embedded here -->
+    <div data-rag-chat
+         data-api-url="http://localhost:8000"
+         data-book-id="physical-ai-textbook"
+         data-container-id="rag-chat-container">
+    </div>
+
+    <!-- Include the RAG Chatbot Widget -->
+    <script src="frontend/chat_widget.js"></script>
+</body>
+</html>

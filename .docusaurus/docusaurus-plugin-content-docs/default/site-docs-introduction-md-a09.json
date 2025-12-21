@@ -1,0 +1,23 @@
+{
+  "id": "introduction",
+  "title": "Introduction",
+  "description": "Welcome to the comprehensive textbook on Physical AI and Humanoid Robotics. This educational resource explores the fascinating intersection of artificial intelligence and robotics, focusing on how AI algorithms can be applied to physical systems and humanoid robots.",
+  "source": "@site/docs/introduction.md",
+  "sourceDirName": ".",
+  "slug": "/introduction",
+  "permalink": "/docs/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Why Physical AI Matters",
+    "permalink": "/docs/why-physical-ai-matters"
+  }
+}

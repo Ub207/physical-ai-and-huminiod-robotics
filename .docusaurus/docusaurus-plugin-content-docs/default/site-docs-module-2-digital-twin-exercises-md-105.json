@@ -1,0 +1,27 @@
+{
+  "id": "module2/digital-twin-exercises",
+  "title": "Digital Twin Exercises",
+  "description": "Exercise 1: Basic Gazebo Environment",
+  "source": "@site/docs/module2/digital-twin-exercises.md",
+  "sourceDirName": "module2",
+  "slug": "/module2/digital-twin-exercises",
+  "permalink": "/docs/module2/digital-twin-exercises",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module2/digital-twin-exercises.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Unity Integration",
+    "permalink": "/docs/module2/unity-integration"
+  },
+  "next": {
+    "title": "Module 3: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/docs/module3/introduction"
+  }
+}
