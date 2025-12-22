@@ -4,7 +4,7 @@
 const config = {
   title: 'Physical AI and Humanoid Robotics',
   tagline: 'Your comprehensive AI & robotics textbook',
-  url: 'https://vercel.com/new/import?framework=docusaurus-2&hasTrialAvailable=1&id=1120776753&name=physical-ai-and-huminiod-robotics&owner=Ub207&project-name=physical-ai-and-huminiod-robotics&provider=github&remainingProjects=1&s=https%3A%2F%2Fgithub.com%2FUb207%2Fphysical-ai-and-huminiod-robotics&teamSlug=ubaid-ur-rahmans-projects-6b672f56&totalProjects=1&deploymentIds=dpl_7Qu7DpxxTPbKnBh4M4KBpivHBgVB',
+  url: 'https://physical-ai-and-huminiod-robotics-gqmo-cg2vqq8hz.vercel.app',
   baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -50,7 +50,7 @@ const config = {
       links: [
         {
           title: 'Docs',
-          items: [{ label: 'Module 4 Intro', to: '/module-4/intro' }],
+          items: [{ label: 'Module 4 Intro', to: '/docs/module-4/intro' }],
         },
         {
           title: 'Community',
