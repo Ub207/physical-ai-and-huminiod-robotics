@@ -12,7 +12,7 @@ const config = {
 
   // Set the production url of your site here
   // IMPORTANT: url should be ONLY the domain, no paths like /new/import
-  url: 'https://physical-ai-and-huminiod-robotics-gqmo.vercel.app',
+  url: 'https://physical-ai-and-huminiod-robotics-c82y.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For your specific deployment, this should be '/docs/'
   baseUrl: '/docs/',
@@ -23,6 +23,7 @@ const config = {
 
   onBrokenLinks: 'warn', // Changed from 'throw' to avoid build failures
   onBrokenMarkdownLinks: 'warn',
+  trailingSlash: false,
 
   // Even if you don't use internationalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
