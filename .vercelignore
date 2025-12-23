@@ -1,0 +1,49 @@
+# Python backend (deployed separately to Render)
+rag-chatbot/
+
+
+# Development files
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.local
+
+# Build artifacts
+node_modules/
+.docusaurus/
+.cache/
+
+# Git
+.git/
+.github/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+nul
+*.log
+.DS_Store
+
+# Specification files (not needed in production)
+.specify/
+.gemini/
+.claude/
+history/
+constitution.md
+specify.md
+clarify.md
+analyze.md
+plan.md
+task.md
+implement.md
+CLAUDE.md
+GEMINI.md
+PROJECT_SUMMARY.md
+
+# Textbook source
+textbook-repo/
