@@ -1,0 +1,20 @@
+# Core FastAPI
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# AI Providers (choose one)
+cohere==5.11.0
+
+# Vector Database
+qdrant-client==1.7.0
+
+# Database
+psycopg2-binary==2.9.9
+
+# Environment
+python-dotenv==1.0.0
+pydantic-settings==2.1.0
+
+# Basic utilities
+requests==2.31.0
