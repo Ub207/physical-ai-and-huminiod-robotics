@@ -5,10 +5,11 @@ import RagChatWidget from '@site/src/components/chat/RagChatWidget';
 // It wraps the entire application
 export default function Root({ children }) {
   // Determine API URL based on environment
+  // TODO: Deploy backend to Render and update this URL
   const apiUrl = typeof window !== 'undefined'
     ? window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
       ? 'http://localhost:8001'  // Local development backend
-      : 'https://your-rag-chatbot-backend.onrender.com'  // Update this with your deployed backend URL from Render
+      : 'http://localhost:8001'  // TEMPORARY: Using local backend. Deploy to Render for production!
     : 'http://localhost:8001';  // Default for SSR
 
   return (
