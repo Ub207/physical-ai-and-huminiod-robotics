@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: rag-chatbot-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.7
+      - key: COHERE_API_KEY
+        sync: false
+      - key: COHERE_EMBED_MODEL
+        value: embed-english-v3.0
+      - key: COHERE_GENERATION_MODEL
+        value: command-r-plus
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: QDRANT_COLLECTION_NAME
+        value: book_chunks
+      - key: NEON_DATABASE_URL
+        sync: false
+      - key: UPLOAD_FOLDER
+        value: /opt/render/project/src/uploads
+      - key: MAX_CONTENT_LENGTH
+        value: 16777216
+      - key: ALLOWED_EXTENSIONS
+        value: pdf,epub,txt
+    healthCheckPath: /health
+    autoDeploy: true

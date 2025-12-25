@@ -5,10 +5,9 @@
   "source": "@site/docs/module1/ros2-packages.md",
   "sourceDirName": "module1",
   "slug": "/module1/ros2-packages",
-  "permalink": "/docs/module1/ros2-packages",
+  "permalink": "/module1/ros2-packages",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module1/ros2-packages.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "ROS 2 Architecture",
-    "permalink": "/docs/module1/ros2-architecture"
+    "permalink": "/module1/ros2-architecture"
   },
   "next": {
     "title": "ROS 2 Exercises",
-    "permalink": "/docs/module1/ros2-exercises"
+    "permalink": "/module1/ros2-exercises"
   }
 }

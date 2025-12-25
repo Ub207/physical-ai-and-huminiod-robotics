@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m \"Initial commit: Physical AI & Humanoid Robotics Textbook\n\nThis repository contains a comprehensive textbook on Physical AI and Humanoid Robotics, featuring:\n\n- 13-week curriculum covering ROS 2, simulation environments, perception, and VLA integration\n- Module-based structure with weekly breakdowns\n- Practical examples and exercises\n- Hardware appendix and troubleshooting guide\n\nBuilt with Docusaurus for interactive documentation.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\")",
+      "Bash(robocopy \"/d/physical-ai and huminiod-robotics/huminiod-robotics/physical-ai-humanoid-robotics-textbook\" \"textbook-repo\" /E)",
+      "Bash(cmd /c \"robocopy \"\"D:\\physical-ai and huminiod-robotics\\huminiod-robotics\\physical-ai-humanoid-robotics-textbook\"\" \"\"D:\\physical-ai and huminiod-robotics\\huminiod-robotics\\textbook-repo\"\" /E\")",
+      "Bash(bash -c \"cd ''/d/physical-ai and huminiod-robotics/huminiod-robotics/textbook-repo'' && pwd && rm -rf .git node_modules && ls -la\")",
+      "Bash(bash -c \"cd ''/d/physical-ai and huminiod-robotics/huminiod-robotics/textbook-repo'' && rm -rf node_modules && rm -rf .git && ls -la\")",
+      "Bash(bash -c \"cd ''/d/physical-ai and huminiod-robotics/huminiod-robotics/textbook-repo'' && git init && git config user.name ''Claude Code'' && git config user.email ''claude-code@anthropic.com'' && git add . && git commit -m ''Initial commit: Physical AI & Humanoid Robotics Textbook\n\nThis repository contains a comprehensive textbook on Physical AI and Humanoid Robotics, featuring:\n\n- 13-week curriculum covering ROS 2, simulation environments, perception, and VLA integration\n- Module-based structure with weekly breakdowns\n- Practical examples and exercises\n- Hardware appendix and troubleshooting guide\n\nBuilt with Docusaurus for interactive documentation.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>''\")",
+      "Bash(bash -c \"cd ''/d/physical-ai and huminiod-robotics/huminiod-robotics/textbook-repo'' && git status\")",
+      "Bash(bash -c \"cd ''/d/physical-ai and huminiod-robotics/huminiod-robotics/textbook-repo'' && ls -la && echo ''---'' && ls -la docs/\")",
+      "Bash(bash -c \"cd ''/d/physical-ai and huminiod-robotics/huminiod-robotics/textbook-repo'' && rm -f docusaurus.config.ts && rm -f docs/intro.md && rm -rf docs/tutorial-basics docs/tutorial-extras blog\")",
+      "Bash(bash -c \"cd ''/d/physical-ai and huminiod-robotics/huminiod-robotics/textbook-repo'' && git add . && git commit -m ''Clean up default Docusaurus content, keep only textbook content''\")",
+      "Bash(bash -c \"cd ''/d/physical-ai and huminiod-robotics/huminiod-robotics/textbook-repo'' && git remote -v\")"
+    ]
+  }
+}

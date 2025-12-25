@@ -5,10 +5,9 @@
   "source": "@site/docs/weekly-breakdown/week-1-2.md",
   "sourceDirName": "weekly-breakdown",
   "slug": "/weekly-breakdown/week-1-2",
-  "permalink": "/docs/weekly-breakdown/week-1-2",
+  "permalink": "/weekly-breakdown/week-1-2",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/weekly-breakdown/week-1-2.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Learning Outcomes",
-    "permalink": "/docs/learning-outcomes"
+    "permalink": "/learning-outcomes"
   },
   "next": {
     "title": "Week 3-4: Robotic Nervous System (ROS 2)",
-    "permalink": "/docs/weekly-breakdown/week-3-4"
+    "permalink": "/weekly-breakdown/week-3-4"
   }
 }

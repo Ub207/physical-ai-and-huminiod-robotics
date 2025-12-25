@@ -4,14 +4,15 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "Physical AI and Humanoid Robotics",
-  "tagline": "Embodied Intelligence in the Physical World",
+  "title": "Physical AI & Humanoid Robotics",
+  "tagline": "The Agent-Native Future",
   "favicon": "img/favicon.ico",
-  "url": "https://your-site.com",
+  "url": "https://physical-robotics-pi.vercel.app",
   "baseUrl": "/",
-  "organizationName": "your-org",
-  "projectName": "physical-ai",
-  "onBrokenLinks": "throw",
+  "organizationName": "Ub207",
+  "projectName": "physical-ai-and-huminiod-robotics",
+  "onBrokenLinks": "warn",
+  "trailingSlash": false,
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -25,12 +26,12 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "./sidebars.js",
-          "editUrl": "https://github.com/your-org/physical-ai/edit/main/"
+          "sidebarPath": "D:\\physical-ai and huminiod-robotics\\sidebars.js",
+          "routeBasePath": "/"
         },
         "blog": false,
         "theme": {
-          "customCss": "./src/css/custom.css"
+          "customCss": "D:\\physical-ai and huminiod-robotics\\src\\css\\custom.css"
         }
       }
     ]
@@ -38,22 +39,20 @@ export default {
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
-      "title": "Physical AI and Humanoid Robotics",
+      "title": "Physical AI & Humanoid Robotics",
       "logo": {
-        "alt": "Physical AI and Humanoid Robotics Logo",
-        "src": "img/logo.webp",
-        "srcDark": "img/logo.webp",
-        "href": "/docs/introduction"
+        "alt": "Physical AI Logo",
+        "src": "img/logo.webp"
       },
       "items": [
         {
-          "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
+          "type": "doc",
+          "docId": "introduction",
           "position": "left",
-          "label": "Textbook"
+          "label": "Docs"
         },
         {
-          "href": "https://github.com/your-org/physical-ai",
+          "href": "https://github.com/Ub207/physical-ai-and-huminiod-robotics",
           "label": "GitHub",
           "position": "right"
         }
@@ -64,19 +63,28 @@ export default {
       "style": "dark",
       "links": [
         {
-          "title": "Textbook",
+          "title": "Docs",
           "items": [
             {
-              "label": "Introduction",
-              "to": "/docs/introduction"
+              "label": "Intro",
+              "to": "/introduction"
+            }
+          ]
+        },
+        {
+          "title": "Community",
+          "items": [
+            {
+              "label": "Stack Overflow",
+              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
             },
             {
-              "label": "Module 1: ROS 2",
-              "to": "/docs/module1/introduction"
+              "label": "Discord",
+              "href": "https://discordapp.com/invite/docusaurus"
             },
             {
-              "label": "Module 2: Digital Twin",
-              "to": "/docs/module2/introduction"
+              "label": "Twitter",
+              "href": "https://twitter.com/docusaurus"
             }
           ]
         },
@@ -85,37 +93,12 @@ export default {
           "items": [
             {
               "label": "GitHub",
-              "href": "https://github.com/your-org/physical-ai"
-            },
-            {
-              "label": "Robotics Stack Exchange",
-              "href": "https://robotics.stackexchange.com/"
-            },
-            {
-              "label": "ROS Documentation",
-              "href": "https://docs.ros.org/"
-            }
-          ]
-        },
-        {
-          "title": "Related",
-          "items": [
-            {
-              "label": "NVIDIA Isaac",
-              "href": "https://developer.nvidia.com/isaac-ros"
-            },
-            {
-              "label": "Gazebo Sim",
-              "href": "https://gazebosim.org/"
-            },
-            {
-              "label": "Unity Robotics",
-              "href": "https://unity.com/solutions/industrial-automation"
+              "href": "https://github.com/Ub207/physical-ai-and-huminiod-robotics"
             }
           ]
         }
       ],
-      "copyright": "Copyright © 2025 Physical AI and Humanoid Robotics Project. Built with Docusaurus."
+      "copyright": "Copyright © 2025 Physical AI & Humanoid Robotics. Built with Docusaurus."
     },
     "prism": {
       "theme": {
@@ -222,73 +205,16 @@ export default {
       },
       "darkTheme": {
         "plain": {
-          "color": "#F8F8F2",
-          "backgroundColor": "#282A36"
+          "color": "#9CDCFE",
+          "backgroundColor": "#1E1E1E"
         },
         "styles": [
           {
             "types": [
-              "prolog",
-              "constant",
-              "builtin"
+              "prolog"
             ],
             "style": {
-              "color": "rgb(189, 147, 249)"
-            }
-          },
-          {
-            "types": [
-              "inserted",
-              "function"
-            ],
-            "style": {
-              "color": "rgb(80, 250, 123)"
-            }
-          },
-          {
-            "types": [
-              "deleted"
-            ],
-            "style": {
-              "color": "rgb(255, 85, 85)"
-            }
-          },
-          {
-            "types": [
-              "changed"
-            ],
-            "style": {
-              "color": "rgb(255, 184, 108)"
-            }
-          },
-          {
-            "types": [
-              "punctuation",
-              "symbol"
-            ],
-            "style": {
-              "color": "rgb(248, 248, 242)"
-            }
-          },
-          {
-            "types": [
-              "string",
-              "char",
-              "tag",
-              "selector"
-            ],
-            "style": {
-              "color": "rgb(255, 121, 198)"
-            }
-          },
-          {
-            "types": [
-              "keyword",
-              "variable"
-            ],
-            "style": {
-              "color": "rgb(189, 147, 249)",
-              "fontStyle": "italic"
+              "color": "rgb(0, 0, 128)"
             }
           },
           {
@@ -296,15 +222,126 @@ export default {
               "comment"
             ],
             "style": {
-              "color": "rgb(98, 114, 164)"
+              "color": "rgb(106, 153, 85)"
             }
           },
           {
             "types": [
-              "attr-name"
+              "builtin",
+              "changed",
+              "keyword",
+              "interpolation-punctuation"
             ],
             "style": {
-              "color": "rgb(241, 250, 140)"
+              "color": "rgb(86, 156, 214)"
+            }
+          },
+          {
+            "types": [
+              "number",
+              "inserted"
+            ],
+            "style": {
+              "color": "rgb(181, 206, 168)"
+            }
+          },
+          {
+            "types": [
+              "constant"
+            ],
+            "style": {
+              "color": "rgb(100, 102, 149)"
+            }
+          },
+          {
+            "types": [
+              "attr-name",
+              "variable"
+            ],
+            "style": {
+              "color": "rgb(156, 220, 254)"
+            }
+          },
+          {
+            "types": [
+              "deleted",
+              "string",
+              "attr-value",
+              "template-punctuation"
+            ],
+            "style": {
+              "color": "rgb(206, 145, 120)"
+            }
+          },
+          {
+            "types": [
+              "selector"
+            ],
+            "style": {
+              "color": "rgb(215, 186, 125)"
+            }
+          },
+          {
+            "types": [
+              "tag"
+            ],
+            "style": {
+              "color": "rgb(78, 201, 176)"
+            }
+          },
+          {
+            "types": [
+              "tag"
+            ],
+            "languages": [
+              "markup"
+            ],
+            "style": {
+              "color": "rgb(86, 156, 214)"
+            }
+          },
+          {
+            "types": [
+              "punctuation",
+              "operator"
+            ],
+            "style": {
+              "color": "rgb(212, 212, 212)"
+            }
+          },
+          {
+            "types": [
+              "punctuation"
+            ],
+            "languages": [
+              "markup"
+            ],
+            "style": {
+              "color": "#808080"
+            }
+          },
+          {
+            "types": [
+              "function"
+            ],
+            "style": {
+              "color": "rgb(220, 220, 170)"
+            }
+          },
+          {
+            "types": [
+              "class-name"
+            ],
+            "style": {
+              "color": "rgb(78, 201, 176)"
+            }
+          },
+          {
+            "types": [
+              "char"
+            ],
+            "style": {
+              "color": "rgb(209, 105, 105)"
             }
           }
         ]

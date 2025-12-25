@@ -5,10 +5,9 @@
   "source": "@site/docs/weekly-breakdown/week-9-10.md",
   "sourceDirName": "weekly-breakdown",
   "slug": "/weekly-breakdown/week-9-10",
-  "permalink": "/docs/weekly-breakdown/week-9-10",
+  "permalink": "/weekly-breakdown/week-9-10",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/weekly-breakdown/week-9-10.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 5,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Week 7-8: Unity Integration & Advanced Simulation",
-    "permalink": "/docs/weekly-breakdown/week-7-8"
+    "permalink": "/weekly-breakdown/week-7-8"
   },
   "next": {
     "title": "Week 11-12: Vision-Language-Action (VLA) & Capstone Preparation",
-    "permalink": "/docs/weekly-breakdown/week-11-12"
+    "permalink": "/weekly-breakdown/week-11-12"
   }
 }

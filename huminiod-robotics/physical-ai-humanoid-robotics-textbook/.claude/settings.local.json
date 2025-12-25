@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la docusaurus.config.*)",
+      "Bash(npm start)",
+      "Bash(npx docusaurus start)",
+      "Bash(npx docusaurus clear)",
+      "Bash(pkill -f docusaurus)",
+      "Bash(pkill -f node)",
+      "Bash(tasklist)",
+      "Bash(findstr node)",
+      "Bash(npx docusaurus start --port 3001)"
+    ]
+  }
+}

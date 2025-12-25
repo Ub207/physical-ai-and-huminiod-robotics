@@ -19,12 +19,16 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Add CORS middleware
+# Add CORS middleware - configured for production deployment
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify exact origins
+    allow_origins=[
+        "https://*.vercel.app",  # All Vercel deployments (including your new project)
+        "http://localhost:3000",  # Local development
+        "http://127.0.0.1:3000",  # Local development alternative
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 

@@ -5,10 +5,9 @@
   "source": "@site/docs/module4/vla-exercises.md",
   "sourceDirName": "module4",
   "slug": "/module4/vla-exercises",
-  "permalink": "/docs/module4/vla-exercises",
+  "permalink": "/module4/vla-exercises",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module4/vla-exercises.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Conversational Robotics",
-    "permalink": "/docs/module4/conversational-robotics"
+    "permalink": "/module4/conversational-robotics"
   },
   "next": {
     "title": "Capstone Project - Autonomous Humanoid Robot",
-    "permalink": "/docs/capstone/introduction"
+    "permalink": "/capstone/introduction"
   }
 }

@@ -1,4 +1,4 @@
-{
+de{
   "permissions": {
     "allow": [
       "Bash(npm run build)",
@@ -117,7 +117,18 @@
       "Bash(timeout 30s python -c \"\nimport requests\nimport json\nimport time\n\nprint(''Testing API connection...'')\n\n# Test with the CORRECT book_id format (underscores)\ntry:\n    print(''Sending request with correct book_id format...'')\n    response = requests.post(''http://localhost:8000/query'', \n                           json={\n                               ''book_id'': ''physical_ai_textbook'',  # Correct format with underscores\n                               ''query'': ''What is this textbook about?'',\n                               ''user_selected_text'': None\n                           },\n                           timeout=20)\n    print(f''SUCCESS - Correct book_id format:'')\n    print(f''  Status Code: {response.status_code}'')\n    response_data = response.json()\n    print(f''  Answer: {response_data[\"\"answer\"\"][:100]}...'')\n    print(f''  Sources: {len(response_data[\"\"sources\"\"])} sources found'')\n    print()\nexcept requests.exceptions.ReadTimeout:\n    print(''API request timed out - this may be normal for complex queries'')\n    print()\nexcept Exception as e:\n    print(f''Error with correct format: {e}'')\n    print()\n\")",
       "Bash(git add .)",
       "Bash(git reset -- huminiod-robotics/)",
-      "Bash(git add .claude .docusaurus .gemini .github .specify CLAUDE.md GEMINI.md PROJECT_SUMMARY.md analyze.md clarify.md constitution.md docs/ docusaurus.config.js history/ implement.md package*.json plan.md rag-chatbot/ sidebars.js specify.md src/ static/ task.md tsconfig.json)"
+      "Bash(git add .claude .docusaurus .gemini .github .specify CLAUDE.md GEMINI.md PROJECT_SUMMARY.md analyze.md clarify.md constitution.md docs/ docusaurus.config.js history/ implement.md package*.json plan.md rag-chatbot/ sidebars.js specify.md src/ static/ task.md tsconfig.json)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd comprehensive Physical AI and Humanoid Robotics project\n\n- Complete Docusaurus documentation website with textbook content\n- RAG chatbot system with Qdrant vector database integration\n- Cohere AI integration for embeddings and text generation\n- Complete textbook content across multiple modules:\n  * Module 1: ROS 2 concepts and architecture\n  * Module 2: Digital twin simulation with Gazebo and Unity\n  * Module 3: AI models and NVIDIA Isaac architecture\n  * Module 4: Vision-Language-Action models and conversational robotics\n- Hardware specifications and lab architecture guides\n- Assessment materials and capstone project documentation\n- Weekly breakdown and learning outcomes\n- All necessary configuration files and dependencies\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push origin main)",
+      "Bash(git add package.json vercel.json)",
+      "Bash(git commit -m \"Fix dependency conflicts for Vercel deployment and add vercel.json\n\n- Updated package.json to align with working configuration\n- Added vercel.json for proper deployment configuration\n- Fixed React version conflicts that were causing build failures\")",
+      "Bash(git add docusaurus.config.js)",
+      "Bash(git commit -m \"Update docusaurus.config.js with correct URL and baseUrl for Vercel deployment\n\n- Set correct URL to match Vercel deployment\n- Set baseUrl to ''/docs/'' to match subpath deployment\n- Updated configuration to match required format\n- Maintained trailingSlash: false as required\")",
+      "Bash(git add vercel.json)",
+      "Bash(git commit -m \"Update vercel.json with proper rewrites for docs subpath\n\n- Added rewrite rule to handle /docs/(.*) routes\n- This ensures proper routing for the Docusaurus site deployed at /docs subpath\")",
+      "Bash(git commit -m \"Update docusaurus.config.js with final corrected version for /docs/ baseUrl\n\n- Updated tagline to ''Your comprehensive AI & robotics textbook''\n- Used require.resolve for sidebarPath and customCss\n- Simplified themeConfig to include only essential navbar configuration\n- Maintained baseUrl: ''/docs/'' and trailingSlash: false as required\")",
+      "Bash(git commit -m \"Update docusaurus.config.js with final Vercel deployment configuration\n\n- Set correct URL for Vercel deployment\n- Maintained baseUrl: ''/docs/'' for subpath routing\n- Added proper navbar items with ''doc'' type for correct routing\n- Added footer with links to documentation\n- Used require.resolve for proper file resolution\n- Maintained trailingSlash: false as required\")",
+      "Bash(git commit -m \"Fix deployment URL and update footer links\n\n- Changed URL to actual Vercel deployment URL instead of import URL\n- Updated footer link to use correct path with /docs/ base URL\n- This should resolve the build failure on Vercel\")"
     ]
   }
 }

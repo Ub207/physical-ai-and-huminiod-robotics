@@ -5,10 +5,9 @@
   "source": "@site/docs/assessments/midterm.md",
   "sourceDirName": "assessments",
   "slug": "/assessments/midterm",
-  "permalink": "/docs/assessments/midterm",
+  "permalink": "/assessments/midterm",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/assessments/midterm.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Assessments Overview",
-    "permalink": "/docs/assessments/introduction"
+    "permalink": "/assessments/introduction"
   },
   "next": {
     "title": "Assessment Rubrics",
-    "permalink": "/docs/assessments/rubrics"
+    "permalink": "/assessments/rubrics"
   }
 }

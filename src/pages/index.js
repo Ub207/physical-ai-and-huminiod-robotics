@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
-import RagChatWidget from '@site/src/components/rag-chatbot/RagChatWidget';
+import RagChatWidget from '@site/src/components/chat/RagChatWidget';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/introduction">
+            to="/introduction">
             Start Reading
           </Link>
         </div>
@@ -61,8 +61,8 @@ export default function Home() {
           </div>
         </section>
       </main>
-      {/* RAG Chatbot Widget */}
-      <RagChatWidget apiUrl="http://localhost:8000" bookId="physical-ai-textbook" />
+      {/* RAG Chatbot Widget - This will use the default from Root.js in production */}
+      <RagChatWidget bookId="physical-ai-textbook" />
     </Layout>
   );
 }

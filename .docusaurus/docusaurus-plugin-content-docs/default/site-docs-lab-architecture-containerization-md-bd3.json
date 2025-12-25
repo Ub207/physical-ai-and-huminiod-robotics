@@ -5,10 +5,9 @@
   "source": "@site/docs/lab-architecture/containerization.md",
   "sourceDirName": "lab-architecture",
   "slug": "/lab-architecture/containerization",
-  "permalink": "/docs/lab-architecture/containerization",
+  "permalink": "/lab-architecture/containerization",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/lab-architecture/containerization.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,6 +17,6 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Cloud Architecture Options",
-    "permalink": "/docs/lab-architecture/cloud-options"
+    "permalink": "/lab-architecture/cloud-options"
   }
 }

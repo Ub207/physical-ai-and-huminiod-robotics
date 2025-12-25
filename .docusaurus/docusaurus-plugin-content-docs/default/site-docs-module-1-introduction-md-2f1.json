@@ -5,10 +5,9 @@
   "source": "@site/docs/module1/introduction.md",
   "sourceDirName": "module1",
   "slug": "/module1/introduction",
-  "permalink": "/docs/module1/introduction",
+  "permalink": "/module1/introduction",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module1/introduction.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Week 11-12: Vision-Language-Action (VLA) & Capstone Preparation",
-    "permalink": "/docs/weekly-breakdown/week-11-12"
+    "permalink": "/weekly-breakdown/week-11-12"
   },
   "next": {
     "title": "ROS 2 Concepts",
-    "permalink": "/docs/module1/ros2-concepts"
+    "permalink": "/module1/ros2-concepts"
   }
 }

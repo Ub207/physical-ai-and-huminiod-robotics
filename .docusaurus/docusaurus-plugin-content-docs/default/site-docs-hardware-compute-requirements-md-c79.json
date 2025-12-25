@@ -5,10 +5,9 @@
   "source": "@site/docs/hardware/compute-requirements.md",
   "sourceDirName": "hardware",
   "slug": "/hardware/compute-requirements",
-  "permalink": "/docs/hardware/compute-requirements",
+  "permalink": "/hardware/compute-requirements",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/hardware/compute-requirements.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Hardware Requirements Overview",
-    "permalink": "/docs/hardware/introduction"
+    "permalink": "/hardware/introduction"
   },
   "next": {
     "title": "Sensor Specifications",
-    "permalink": "/docs/hardware/sensor-specifications"
+    "permalink": "/hardware/sensor-specifications"
   }
 }

@@ -5,10 +5,9 @@
   "source": "@site/docs/hardware/sensor-specifications.md",
   "sourceDirName": "hardware",
   "slug": "/hardware/sensor-specifications",
-  "permalink": "/docs/hardware/sensor-specifications",
+  "permalink": "/hardware/sensor-specifications",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/hardware/sensor-specifications.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Compute Requirements",
-    "permalink": "/docs/hardware/compute-requirements"
+    "permalink": "/hardware/compute-requirements"
   },
   "next": {
     "title": "Actuator Specifications",
-    "permalink": "/docs/hardware/actuator-specifications"
+    "permalink": "/hardware/actuator-specifications"
   }
 }

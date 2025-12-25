@@ -5,10 +5,9 @@
   "source": "@site/docs/capstone/introduction.md",
   "sourceDirName": "capstone",
   "slug": "/capstone/introduction",
-  "permalink": "/docs/capstone/introduction",
+  "permalink": "/capstone/introduction",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/capstone/introduction.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
@@ -28,10 +27,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "VLA Exercises",
-    "permalink": "/docs/module4/vla-exercises"
+    "permalink": "/module4/vla-exercises"
   },
   "next": {
     "title": "Capstone Project Requirements",
-    "permalink": "/docs/capstone/project-requirements"
+    "permalink": "/capstone/project-requirements"
   }
 }

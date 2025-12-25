@@ -20,6 +20,7 @@ else:
         qdrant_client = QdrantClient(
             url=settings.qdrant_url,
             api_key=settings.qdrant_api_key,
+            prefer_grpc=False,
         )
 
         # Get collection info

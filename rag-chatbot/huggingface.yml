@@ -1,0 +1,30 @@
+runtime:
+  python: "3.11"
+  requirements: requirements.txt
+
+api:
+  endpoint: /api/main:app
+  type: inference-endpoint
+
+env:
+  - name: AI_PROVIDER
+    value: "cohere"
+  - name: COHERE_EMBED_MODEL
+    value: "embed-english-v3.0"
+  - name: COHERE_GENERATION_MODEL
+    value: "command-r-plus"
+  - name: QDRANT_COLLECTION_NAME
+    value: "book_chunks"
+  - name: UPLOAD_FOLDER
+    value: "uploads"
+  - name: MAX_CONTENT_LENGTH
+    value: "16777216"
+  - name: ALLOWED_EXTENSIONS
+    value: "pdf,epub,txt"
+
+hardware:
+  space:
+    sku: cpu-basic
+  inference:
+    accelerator: cpu
+    instance: c5.xlarge

@@ -5,10 +5,9 @@
   "source": "@site/docs/module2/introduction.md",
   "sourceDirName": "module2",
   "slug": "/module2/introduction",
-  "permalink": "/docs/module2/introduction",
+  "permalink": "/module2/introduction",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module2/introduction.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "ROS 2 Exercises",
-    "permalink": "/docs/module1/ros2-exercises"
+    "permalink": "/module1/ros2-exercises"
   },
   "next": {
     "title": "Gazebo Simulation",
-    "permalink": "/docs/module2/gazebo-simulation"
+    "permalink": "/module2/gazebo-simulation"
   }
 }

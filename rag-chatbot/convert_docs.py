@@ -32,7 +32,7 @@ if not QDRANT_URL:
     qdrant_client = QdrantClient(host=os.getenv("QDRANT_HOST", "localhost"), port=int(os.getenv("QDRANT_PORT", "6333")))
     print("Connecting to local Qdrant instance.")
 else:
-    qdrant_client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+    qdrant_client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, prefer_grpc=False)
     print(f"Connecting to Qdrant Cloud at {QDRANT_URL}.")
 
 # Qdrant collection details
@@ -116,19 +116,25 @@ def upload_to_qdrant(chunks: list[dict], book_id: str = "physical_ai_textbook", 
     """
     # Ensure the collection exists
     try:
-        qdrant_client.recreate_collection(
+        # Check if collection exists first
+        try:
+            collection_info = qdrant_client.get_collection(collection_name=COLLECTION_NAME)
+            print(f"Collection '{COLLECTION_NAME}' already exists with {collection_info.points_count} points.")
+            # Delete existing collection to recreate
+            qdrant_client.delete_collection(collection_name=COLLECTION_NAME)
+            print(f"Deleted existing collection '{COLLECTION_NAME}'.")
+        except Exception:
+            print(f"Collection '{COLLECTION_NAME}' does not exist yet.")
+
+        # Create new collection
+        qdrant_client.create_collection(
             collection_name=COLLECTION_NAME,
             vectors_config=models.VectorParams(size=VECTOR_SIZE, distance=models.Distance.COSINE),
         )
-        print(f"Collection '{COLLECTION_NAME}' recreated.")
+        print(f"Collection '{COLLECTION_NAME}' created successfully.")
     except Exception as e:
-        print(f"Could not recreate collection, checking if it exists: {e}")
-        try:
-            qdrant_client.get_collection(collection_name=COLLECTION_NAME)
-            print(f"Collection '{COLLECTION_NAME}' already exists.")
-        except Exception as e_get:
-            print(f"Collection '{COLLECTION_NAME}' does not exist and could not be created: {e_get}")
-            raise
+        print(f"Error managing collection: {e}")
+        raise
 
     # Prepare points for upsertion
     chunk_contents = [chunk["content"] for chunk in chunks]

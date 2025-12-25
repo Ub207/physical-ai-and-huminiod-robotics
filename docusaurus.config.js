@@ -12,10 +12,10 @@ const config = {
 
   // Set the production url of your site here
   // IMPORTANT: url should be ONLY the domain, no paths like /new/import
-  url: 'https://physical-ai-and-huminiod-robotics-c82y.vercel.app',
+  url: 'https://physical-robotics-pi.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For your specific deployment, this should be '/docs/'
-  baseUrl: '/docs/',
+  // For Vercel deployment, use '/' to serve at root
+  baseUrl: '/',
 
   // GitHub pages deployment config (not needed for Vercel, but kept for reference)
   organizationName: 'Ub207', // Your GitHub org/user name
@@ -61,12 +61,12 @@ const config = {
         title: 'Physical AI & Humanoid Robotics',
         logo: {
           alt: 'Physical AI Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.webp',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
+            docId: 'introduction',
             position: 'left',
             label: 'Docs',
           },
@@ -85,7 +85,7 @@ const config = {
             items: [
               {
                 label: 'Intro',
-                to: '/docs/intro',
+                to: '/introduction',
               },
             ],
           },
@@ -116,7 +116,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics. Built with Docusaurus.`,
+        copyright: `Copyright © 2025 Physical AI & Humanoid Robotics. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

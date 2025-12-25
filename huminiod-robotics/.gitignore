@@ -1,0 +1,118 @@
+# Docusaurus / Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.cjs
+.pnp.loader.mjs
+
+# Production builds
+/build/
+/dist/
+/public/
+
+# Docusaurus generated files
+.docusaurus/
+.temp/
+.cache/
+
+# Environment variables
+.env*
+!.env.example
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Temporary folders
+tmp/
+temp/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python (for ROS 2 development)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+.ENV/
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.out
+*.pid
+*.seed
+*.log
+*.tmp
+.pytest_cache/
+.pyre/
+.pytype/
+.ipynb_checkpoints/
+
+# ROS 2 specific
+*.rviz
+*.yaml
+.develspace/
+.installspace/
+.build/
+.log/
+*.log
+*.log.*
+
+# Build outputs
+*.o
+*.a
+*.so
+*.exe
+*.dll
+*.pyc
+*.pyo
+*.pyd
+*.dylib
+
+# Documentation assets that might be generated
+docs/api/
+docs/_build/
+
+# Secrets and credentials
+secrets/
+credentials.json
+*.key
+*.pem
+*.crt
+*.cert

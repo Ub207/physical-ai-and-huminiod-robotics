@@ -5,10 +5,9 @@
   "source": "@site/docs/assessments/rubrics.md",
   "sourceDirName": "assessments",
   "slug": "/assessments/rubrics",
-  "permalink": "/docs/assessments/rubrics",
+  "permalink": "/assessments/rubrics",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/assessments/rubrics.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Midterm Assessment",
-    "permalink": "/docs/assessments/midterm"
+    "permalink": "/assessments/midterm"
   },
   "next": {
     "title": "Hardware Requirements Overview",
-    "permalink": "/docs/hardware/introduction"
+    "permalink": "/hardware/introduction"
   }
 }

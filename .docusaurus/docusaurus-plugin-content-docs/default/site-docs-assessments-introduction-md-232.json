@@ -5,10 +5,9 @@
   "source": "@site/docs/assessments/introduction.md",
   "sourceDirName": "assessments",
   "slug": "/assessments/introduction",
-  "permalink": "/docs/assessments/introduction",
+  "permalink": "/assessments/introduction",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/assessments/introduction.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Capstone Results and Evaluation",
-    "permalink": "/docs/capstone/results"
+    "permalink": "/capstone/results"
   },
   "next": {
     "title": "Midterm Assessment",
-    "permalink": "/docs/assessments/midterm"
+    "permalink": "/assessments/midterm"
   }
 }

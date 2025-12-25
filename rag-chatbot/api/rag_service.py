@@ -1,7 +1,7 @@
 import asyncio
 import uuid
 from typing import List, Dict, Any
-from utils.cohere_client import CohereClient
+from utils.client_factory import AIClientFactory
 from utils.vector_store import VectorStore
 from utils.text_processor import TextProcessor
 from utils.database import DatabaseManager
@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class RAGService:
     def __init__(self):
-        self.cohere_client = CohereClient()
+        self.ai_client = AIClientFactory.create_client()
         self.vector_store = VectorStore()
         self.db_manager = DatabaseManager()
 
@@ -51,7 +51,7 @@ class RAGService:
 
                 for chunk_text in text_chunks:
                     # Create embedding for the chunk
-                    embeddings = self.cohere_client.embed_texts([chunk_text], input_type="search_document")
+                    embeddings = self.ai_client.embed_texts([chunk_text], input_type="search_document")
                     embedding = embeddings[0] if embeddings else []
 
                     # Create chunk object
@@ -98,7 +98,7 @@ class RAGService:
             if request.user_selected_text:
                 query_texts.append(request.user_selected_text)
 
-            query_embeddings = self.cohere_client.embed_texts(query_texts, input_type="search_query")
+            query_embeddings = self.ai_client.embed_texts(query_texts, input_type="search_query")
             query_embedding = query_embeddings[0]  # Use the main query for search
 
             # Search for relevant chunks in the vector store
@@ -115,18 +115,35 @@ class RAGService:
 
             context = "\n\n".join(context_parts)
 
-            # Generate response using Cohere
-            if request.user_selected_text:
-                answer = self.cohere_client.chat(
-                    message=request.query,
-                    context=context,
-                    selected_text=request.user_selected_text
-                )
-            else:
-                answer = self.cohere_client.chat(
-                    message=request.query,
-                    context=context
-                )
+            # If no relevant context is found, set a default context
+            if not context.strip():
+                context = "You are an AI assistant for a Physical AI and Humanoid Robotics textbook. The user has asked a general question that is not directly related to specific textbook content."
+
+            # Generate response using configured AI client
+            try:
+                if request.user_selected_text:
+                    answer = self.ai_client.chat(
+                        message=request.query,
+                        context=context,
+                        selected_text=request.user_selected_text
+                    )
+                else:
+                    answer = self.ai_client.chat(
+                        message=request.query,
+                        context=context
+                    )
+            except Exception as e:
+                logger.exception(f"An exception occurred during the AI chat API call: {str(e)}")
+                # Provide a fallback response when AI API fails
+                if "greeting" in request.query.lower() or request.query.lower() in ["hi", "hello", "hey"]:
+                    answer = "Hello! I'm your AI assistant for the Physical AI and Humanoid Robotics textbook. How can I help you with questions about the book content?"
+                elif len(request.query.strip().split()) <= 3:  # Simple short questions
+                    # For very simple questions like "what is AI?", provide a more helpful response
+                    answer = f"I understand you're asking '{request.query}'. I'm designed to answer questions based on the Physical AI and Humanoid Robotics textbook content. Since no specific textbook content was found for your query, I recommend asking more specific questions about the textbook material for better answers."
+                elif relevant_chunks:  # If we found relevant context but API failed, provide that info
+                    answer = f"I found some relevant information about your question '{request.query}', but I'm having trouble generating a response right now. The textbook covers this topic in pages {relevant_chunks[0]['page_number']} and related content. Please try asking more specific questions about the textbook material."
+                else:
+                    answer = "I'm having trouble processing your request at the moment. Please try rephrasing your question about the textbook content."
 
             # Format sources
             sources = []
@@ -138,7 +155,7 @@ class RAGService:
                 })
 
             # Calculate tokens used (approximate)
-            tokens_used = len(answer.split())
+            tokens_used = len(answer.split()) if answer else 0
 
             # Store the conversation in the database (async operation)
             # For now, we'll use a simple session ID based on book_id
@@ -146,10 +163,15 @@ class RAGService:
             self.db_manager.add_message(session_id, "user", request.query)
             self.db_manager.add_message(session_id, "assistant", answer)
 
+            # Calculate confidence based on relevance scores
+            confidence = 0.5  # Default confidence
+            if relevant_chunks:
+                confidence = min(1.0, max(0.0, relevant_chunks[0]["score"]))
+
             return QueryResponse(
                 answer=answer,
                 sources=sources,
-                confidence=min(1.0, max(0.0, relevant_chunks[0]["score"] if relevant_chunks else 0.5)),
+                confidence=confidence,
                 tokens_used=tokens_used
             )
 

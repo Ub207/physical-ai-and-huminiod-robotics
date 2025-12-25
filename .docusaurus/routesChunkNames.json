@@ -42,184 +42,184 @@
       "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/docs-61c": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
-    "__context": {
-      "plugin": "plugin---docsaba-d7c"
-    }
-  },
-  "/docs-a29": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---docs-005-788"
-  },
-  "/docs-005": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
-  },
-  "/docs/assessments/introduction-67d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-assessments-introduction-232-6c9"
-  },
-  "/docs/assessments/midterm-126": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-assessments-midterm-467-451"
-  },
-  "/docs/assessments/rubrics-d52": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-assessments-rubricseef-fa9"
-  },
-  "/docs/capstone/implementation-8be": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-capstone-implementation-245-494"
-  },
-  "/docs/capstone/introduction-2f3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-capstone-introductiona-7-a-1c9"
-  },
-  "/docs/capstone/project-requirements-e2f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-capstone-project-requirements-537-c8c"
-  },
-  "/docs/capstone/results-ee4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-capstone-resultsea-4-f3e"
-  },
-  "/docs/hardware/actuator-specifications-3e8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-actuator-specifications-14-d-d9e"
-  },
-  "/docs/hardware/compute-requirements-2ea": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-compute-requirementsc-79-e45"
-  },
-  "/docs/hardware/introduction-a22": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-introductionf-3-e-e3d"
-  },
-  "/docs/hardware/sensor-specifications-24b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-sensor-specificationsc-35-66d"
-  },
-  "/docs/introduction-f7d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-introductiona-09-6b4"
-  },
-  "/docs/lab-architecture/cloud-options-bc7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-lab-architecture-cloud-optionsc-36-23d"
-  },
-  "/docs/lab-architecture/containerization-b9a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-lab-architecture-containerizationbd-3-a6a"
-  },
-  "/docs/lab-architecture/local-setup-1c4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-lab-architecture-local-setupc-1-e-ea0"
-  },
-  "/docs/learning-outcomes-769": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-learning-outcomes-8-b-2-451"
-  },
-  "/docs/module1/introduction-8b3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-1-introduction-2-f-1-23c"
-  },
-  "/docs/module1/ros2-architecture-3f7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-1-ros-2-architecture-275-04f"
-  },
-  "/docs/module1/ros2-concepts-526": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-1-ros-2-conceptsdcd-9d0"
-  },
-  "/docs/module1/ros2-exercises-3dc": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-1-ros-2-exercisesc-24-ba5"
-  },
-  "/docs/module1/ros2-packages-24a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-1-ros-2-packages-0-b-7-7d2"
-  },
-  "/docs/module2/digital-twin-exercises-e95": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-2-digital-twin-exercises-105-ccb"
-  },
-  "/docs/module2/gazebo-simulation-954": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-2-gazebo-simulation-775-bc3"
-  },
-  "/docs/module2/introduction-cee": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-2-introduction-9-a-7-2b9"
-  },
-  "/docs/module2/unity-integration-c67": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-2-unity-integrationd-1-d-23c"
-  },
-  "/docs/module3/ai-models-6de": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-3-ai-modelsc-87-8ff"
-  },
-  "/docs/module3/introduction-aed": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-3-introduction-479-a80"
-  },
-  "/docs/module3/isaac-architecture-7e5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-3-isaac-architecture-51-d-e72"
-  },
-  "/docs/module3/robot-control-734": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-3-robot-controle-40-ccd"
-  },
-  "/docs/module4/conversational-robotics-01e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-4-conversational-roboticsf-41-f1c"
-  },
-  "/docs/module4/introduction-b3d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-4-introduction-9-e-1-c0a"
-  },
-  "/docs/module4/vla-exercises-8cc": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-4-vla-exercises-9-d-2-c5f"
-  },
-  "/docs/module4/vla-models-809": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-module-4-vla-modelsad-8-27e"
-  },
-  "/docs/weekly-breakdown/week-1-2-517": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-weekly-breakdown-week-1-24-e-0-273"
-  },
-  "/docs/weekly-breakdown/week-11-12-501": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-weekly-breakdown-week-11-12595-b41"
-  },
-  "/docs/weekly-breakdown/week-3-4-b7a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-weekly-breakdown-week-3-4-dd-4-d9f"
-  },
-  "/docs/weekly-breakdown/week-5-6-16c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-weekly-breakdown-week-5-668-a-19f"
-  },
-  "/docs/weekly-breakdown/week-7-8-d72": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-weekly-breakdown-week-7-8-cd-8-115"
-  },
-  "/docs/weekly-breakdown/week-9-10-9cf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-weekly-breakdown-week-9-10305-090"
-  },
-  "/docs/why-physical-ai-matters-2f4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-why-physical-ai-matters-744-9a8"
-  },
   "/-2e1": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {
       "plugin": "plugin---a-74-9d6"
     },
     "config": "config---5-e-9-4f3"
+  },
+  "/-23a": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---aba-d70"
+    }
+  },
+  "/-663": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---22-d-307"
+  },
+  "/-286": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/assessments/introduction-858": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assessments-introduction-232-8b3"
+  },
+  "/assessments/midterm-2d4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assessments-midterm-467-dfe"
+  },
+  "/assessments/rubrics-e89": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assessments-rubricseef-4e1"
+  },
+  "/capstone/implementation-5ac": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---capstone-implementation-245-06e"
+  },
+  "/capstone/introduction-199": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---capstone-introductiona-7-a-cf0"
+  },
+  "/capstone/project-requirements-58c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---capstone-project-requirements-537-ecd"
+  },
+  "/capstone/results-259": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---capstone-resultsea-4-f33"
+  },
+  "/hardware/actuator-specifications-2e9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---hardware-actuator-specifications-14-d-06d"
+  },
+  "/hardware/compute-requirements-260": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---hardware-compute-requirementsc-79-3cc"
+  },
+  "/hardware/introduction-c48": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---hardware-introductionf-3-e-575"
+  },
+  "/hardware/sensor-specifications-7aa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---hardware-sensor-specificationsc-35-d7c"
+  },
+  "/introduction-363": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---introductiona-09-926"
+  },
+  "/lab-architecture/cloud-options-5b8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---lab-architecture-cloud-optionsc-36-f88"
+  },
+  "/lab-architecture/containerization-7d8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---lab-architecture-containerizationbd-3-9ab"
+  },
+  "/lab-architecture/local-setup-da4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---lab-architecture-local-setupc-1-e-94b"
+  },
+  "/learning-outcomes-76d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---learning-outcomes-8-b-2-80c"
+  },
+  "/module1/introduction-1df": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-1-introduction-2-f-1-057"
+  },
+  "/module1/ros2-architecture-beb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-1-ros-2-architecture-275-4eb"
+  },
+  "/module1/ros2-concepts-8ac": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-1-ros-2-conceptsdcd-bd5"
+  },
+  "/module1/ros2-exercises-ccf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-1-ros-2-exercisesc-24-d9d"
+  },
+  "/module1/ros2-packages-f8d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-1-ros-2-packages-0-b-7-473"
+  },
+  "/module2/digital-twin-exercises-98c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-2-digital-twin-exercises-105-16c"
+  },
+  "/module2/gazebo-simulation-149": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-2-gazebo-simulation-775-d15"
+  },
+  "/module2/introduction-d96": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-2-introduction-9-a-7-d68"
+  },
+  "/module2/unity-integration-b8c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-2-unity-integrationd-1-d-279"
+  },
+  "/module3/ai-models-192": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-3-ai-modelsc-87-879"
+  },
+  "/module3/introduction-639": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-3-introduction-479-5fe"
+  },
+  "/module3/isaac-architecture-d20": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-3-isaac-architecture-51-d-c9b"
+  },
+  "/module3/robot-control-ea2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-3-robot-controle-40-4ca"
+  },
+  "/module4/conversational-robotics-113": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-4-conversational-roboticsf-41-b65"
+  },
+  "/module4/introduction-bd5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-4-introduction-9-e-1-2ad"
+  },
+  "/module4/vla-exercises-434": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-4-vla-exercises-9-d-2-1fd"
+  },
+  "/module4/vla-models-938": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---module-4-vla-modelsad-8-d7d"
+  },
+  "/weekly-breakdown/week-1-2-9a6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---weekly-breakdown-week-1-24-e-0-87e"
+  },
+  "/weekly-breakdown/week-11-12-a06": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---weekly-breakdown-week-11-12595-31a"
+  },
+  "/weekly-breakdown/week-3-4-d51": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---weekly-breakdown-week-3-4-dd-4-5a7"
+  },
+  "/weekly-breakdown/week-5-6-531": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---weekly-breakdown-week-5-668-a-d53"
+  },
+  "/weekly-breakdown/week-7-8-8c4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---weekly-breakdown-week-7-8-cd-8-d59"
+  },
+  "/weekly-breakdown/week-9-10-161": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---weekly-breakdown-week-9-10305-677"
+  },
+  "/why-physical-ai-matters-8fa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---why-physical-ai-matters-744-928"
   }
 }

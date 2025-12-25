@@ -5,10 +5,9 @@
   "source": "@site/docs/module1/ros2-exercises.md",
   "sourceDirName": "module1",
   "slug": "/module1/ros2-exercises",
-  "permalink": "/docs/module1/ros2-exercises",
+  "permalink": "/module1/ros2-exercises",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/module1/ros2-exercises.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 5,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "ROS 2 Packages",
-    "permalink": "/docs/module1/ros2-packages"
+    "permalink": "/module1/ros2-packages"
   },
   "next": {
     "title": "Module 2: The Digital Twin (Gazebo & Unity)",
-    "permalink": "/docs/module2/introduction"
+    "permalink": "/module2/introduction"
   }
 }

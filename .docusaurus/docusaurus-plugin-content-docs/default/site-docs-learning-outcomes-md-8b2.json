@@ -5,10 +5,9 @@
   "source": "@site/docs/learning-outcomes.md",
   "sourceDirName": ".",
   "slug": "/learning-outcomes",
-  "permalink": "/docs/learning-outcomes",
+  "permalink": "/learning-outcomes",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/your-org/physical-ai/edit/main/docs/learning-outcomes.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Why Physical AI Matters",
-    "permalink": "/docs/why-physical-ai-matters"
+    "permalink": "/why-physical-ai-matters"
   },
   "next": {
     "title": "Week 1-2: Foundations of Physical AI",
-    "permalink": "/docs/weekly-breakdown/week-1-2"
+    "permalink": "/weekly-breakdown/week-1-2"
   }
 }
