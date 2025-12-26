@@ -19,16 +19,12 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Add CORS middleware - configured for production deployment
+# Add CORS middleware - allow all origins for Hugging Face Space
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://*.vercel.app",  # All Vercel deployments (including your new project)
-        "http://localhost:3000",  # Local development
-        "http://127.0.0.1:3000",  # Local development alternative
-    ],
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
@@ -41,10 +37,6 @@ async def root():
 
 @app.post("/ingest", summary="Ingest a book into the RAG system")
 async def ingest_book(request: IngestionRequest):
-    """
-    Process and ingest a book file into the vector database for RAG.
-    Supports PDF, EPUB, and TXT formats.
-    """
     try:
         logger.info(f"Starting ingestion for book: {request.book_id}")
         result = await rag_service.ingest_book(request)
@@ -56,10 +48,6 @@ async def ingest_book(request: IngestionRequest):
 
 @app.post("/query", response_model=QueryResponse, summary="Query the RAG system")
 async def query_book(request: QueryRequest):
-    """
-    Query the RAG system with a question about the book.
-    Can optionally include user-selected text for ad-hoc queries.
-    """
     try:
         logger.info(f"Processing query for book: {request.book_id}")
         result = await rag_service.query(request)
@@ -71,44 +59,25 @@ async def query_book(request: QueryRequest):
 
 @app.post("/upload", summary="Upload a book file")
 async def upload_file(file: UploadFile = File(...)):
-    """
-    Upload a book file (PDF, EPUB, TXT) to the server.
-    """
     try:
-        # Validate file type
         if not file.filename:
             raise HTTPException(status_code=400, detail="No file provided")
-
-        # Check file extension
         file_ext = os.path.splitext(file.filename)[1].lower()
         if file_ext not in ['.pdf', '.epub', '.txt']:
-            raise HTTPException(status_code=400, detail="File type not supported. Only PDF, EPUB, and TXT are allowed.")
-
-        # Create upload directory if it doesn't exist
+            raise HTTPException(status_code=400, detail="File type not supported.")
         os.makedirs(settings.upload_folder, exist_ok=True)
-
-        # Sanitize filename to prevent security issues
         sanitized_filename = sanitize_filename(file.filename)
         file_path = os.path.join(settings.upload_folder, sanitized_filename)
-
-        # Save file
         with open(file_path, "wb") as buffer:
             content = await file.read()
             buffer.write(content)
-
-        return {
-            "filename": sanitized_filename,
-            "file_path": file_path,
-            "size": len(content),
-            "message": "File uploaded successfully"
-        }
+        return {"filename": sanitized_filename, "file_path": file_path, "size": len(content), "message": "File uploaded successfully"}
     except Exception as e:
         logger.error(f"Error uploading file: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error uploading file: {str(e)}")
 
 @app.get("/health")
 async def health_check():
-    """Health check endpoint."""
     return {"status": "healthy", "message": "RAG Chatbot API is running"}
 
 if __name__ == "__main__":
