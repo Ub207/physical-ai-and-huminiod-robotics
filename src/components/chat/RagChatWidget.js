@@ -280,7 +280,7 @@ function createChatWidgetScript(apiUrl, bookId) {
   `;
 }
 
-export default function RagChatWidget({ apiUrl = 'http://localhost:8001', bookId = 'physical_ai_textbook' }) {
+export default function RagChatWidget({ apiUrl = 'https://ubaid-ai-rag-chatbot.hf.space', bookId = 'physical_ai_textbook' }) {
   const { siteConfig } = useDocusaurusContext();
 
   useEffect(() => {
