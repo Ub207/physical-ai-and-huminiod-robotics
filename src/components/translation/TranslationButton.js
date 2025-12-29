@@ -15,6 +15,7 @@ export default function TranslationButton() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [lastRequestTime, setLastRequestTime] = useState(0);
+  const [originalContent, setOriginalContent] = useState(null); // Store original HTML for toggle
 
   // API URL - use localhost for dev, HF Space for production
   const apiUrl = typeof window !== 'undefined' && window.location.hostname === 'localhost'
@@ -22,19 +23,34 @@ export default function TranslationButton() {
     : 'https://ubaid-ai-rag-chatbot.hf.space';
 
   useEffect(() => {
+    // CRITICAL: Reset state on mount - each chapter is independent
+    setIsTranslated(false);
+    setOriginalContent(null);
+    setError(null);
+
     // Check authentication status
     const user = localStorage.getItem('currentUser');
     setCurrentUser(user);
 
-    // Check if current chapter is already translated
+    // Check if current chapter is already translated (from cache)
     if (user) {
       const chapterId = getChapterId();
       const cached = getCachedTranslation(chapterId);
       if (cached) {
+        // Store original content before applying cached translation
+        const original = getChapterContent();
+        setOriginalContent(original);
+        setChapterContent(cached);
         setIsTranslated(true);
       }
     }
-  }, []);
+
+    // Cleanup: when component unmounts (user navigates away), ensure state resets
+    return () => {
+      setIsTranslated(false);
+      setOriginalContent(null);
+    };
+  }, []); // Empty dependency array = run once on mount per chapter
 
   const getChapterId = () => {
     // Extract chapter ID from URL path
@@ -155,6 +171,11 @@ export default function TranslationButton() {
     try {
       const content = getChapterContent();
 
+      // Store original content for toggle functionality
+      if (!originalContent) {
+        setOriginalContent(content);
+      }
+
       // Extract text content while preserving structure
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = content;
@@ -210,9 +231,15 @@ export default function TranslationButton() {
   };
 
   const showOriginal = () => {
-    // Reload the page to show original content
-    if (typeof window !== 'undefined') {
-      window.location.reload();
+    // Restore original content without page reload
+    if (originalContent) {
+      setChapterContent(originalContent);
+      setIsTranslated(false);
+    } else {
+      // Fallback: reload if original content not stored (shouldn't happen)
+      if (typeof window !== 'undefined') {
+        window.location.reload();
+      }
     }
   };
 

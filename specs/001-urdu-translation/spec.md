@@ -15,6 +15,23 @@
 - Q: Translation Caching Strategy - should we cache translations? → A: localStorage cache with 7-day TTL (balance between freshness and API cost)
 - Q: Rate Limiting - limit translation requests per user? → A: Simple client-side throttling (1 request per 2 seconds, prevent rapid clicking)
 
+### CRITICAL CLARIFICATION - Translation Scope (2025-12-29 Update)
+
+**IMPORTANT**: Translation is **PER-CHAPTER ONLY**, not global:
+- ✅ CORRECT: Each chapter has independent translation state
+- ✅ CORRECT: Translating Chapter A does NOT affect Chapter B
+- ✅ CORRECT: User navigates to Chapter B → sees English (default)
+- ✅ CORRECT: User must click translate button separately for each chapter
+- ❌ WRONG: Translating once and all chapters become Urdu
+- ❌ WRONG: Site-wide language preference persistence
+- ❌ WRONG: Global translation state across navigation
+
+**Bonus Points Logic**:
+- First translation of Chapter A → +50 points
+- First translation of Chapter B → +50 points (separate chapter)
+- Retranslating Chapter A → +0 points (already awarded)
+- Maximum possible points = 50 × number of chapters
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Logged-in User Translates Chapter to Urdu (Priority: P1)
@@ -72,6 +89,8 @@ A logged-in user who has translated a chapter to Urdu can toggle back to the ori
 - What happens when user's bonus points quota is reached (if there's a maximum)?
 - How does system handle partial translations when API returns incomplete results?
 - What happens when user loses internet connection during translation?
+- **CRITICAL**: What happens when user translates Chapter A, then navigates to Chapter B? (Answer: Chapter B shows English by default, independent state)
+- **CRITICAL**: What happens when user translates Chapter A, navigates away, then returns to Chapter A? (Answer: Shows cached Urdu translation, no new API call, no new bonus points)
 
 ## Requirements *(mandatory)*
 
@@ -91,6 +110,11 @@ A logged-in user who has translated a chapter to Urdu can toggle back to the ori
 - **FR-012**: System MUST store bonus points in localStorage with structure: `{userId: {totalPoints: number, translationHistory: [{chapterId, timestamp, pointsAwarded}]}}`
 - **FR-013**: System MUST cache translated content in localStorage with 7-day TTL to reduce API costs and improve performance
 - **FR-014**: System MUST implement client-side rate limiting (minimum 2-second gap between translation requests) to prevent API abuse
+- **FR-015**: System MUST maintain translation state PER-CHAPTER only (translating Chapter A does NOT affect Chapter B)
+- **FR-016**: System MUST reset to English (default) when user navigates to a different chapter
+- **FR-017**: System MUST NOT persist language preference across chapter navigation
+- **FR-018**: System MUST track translation state using chapter-specific keys: `translation_state_${chapterId}` in component state (NOT localStorage)
+- **FR-019**: System MUST scope all translation operations to the currently active chapter only
 
 ### Key Entities
 
