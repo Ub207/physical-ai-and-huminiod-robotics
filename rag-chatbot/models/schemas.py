@@ -40,3 +40,14 @@ class IngestionRequest(BaseModel):
     file_path: str
     chunk_size: int = 512
     chunk_overlap: int = 50
+
+class TranslationRequest(BaseModel):
+    text: str
+    target_language: str
+    preserve_formatting: bool = True
+
+class TranslationResponse(BaseModel):
+    translated_text: str
+    source_language: str
+    target_language: str
+    character_count: int

@@ -5,7 +5,7 @@ import os
 import logging
 
 from config.settings import settings
-from models.schemas import QueryRequest, QueryResponse, IngestionRequest
+from models.schemas import QueryRequest, QueryResponse, IngestionRequest, TranslationRequest, TranslationResponse
 from api.rag_service import RAGService
 from utils.helpers import sanitize_filename
 
@@ -79,6 +79,17 @@ async def upload_file(file: UploadFile = File(...)):
 @app.get("/health")
 async def health_check():
     return {"status": "healthy", "message": "RAG Chatbot API is running"}
+
+@app.post("/translate", response_model=TranslationResponse, summary="Translate text to target language")
+async def translate_text(request: TranslationRequest):
+    try:
+        logger.info(f"Translating text to {request.target_language}")
+        result = await rag_service.translate(request)
+        logger.info(f"Successfully translated to {request.target_language}")
+        return result
+    except Exception as e:
+        logger.error(f"Error translating text: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error translating text: {str(e)}")
 
 if __name__ == "__main__":
     import uvicorn

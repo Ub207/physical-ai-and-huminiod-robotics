@@ -5,7 +5,7 @@ from utils.client_factory import AIClientFactory
 from utils.vector_store import VectorStore
 from utils.text_processor import TextProcessor
 from utils.database import DatabaseManager
-from models.schemas import QueryRequest, QueryResponse, IngestionRequest, Chunk
+from models.schemas import QueryRequest, QueryResponse, IngestionRequest, Chunk, TranslationRequest, TranslationResponse
 from config.settings import settings
 import logging
 
@@ -177,4 +177,39 @@ class RAGService:
 
         except Exception as e:
             logger.error(f"Error processing query for book {request.book_id}: {str(e)}")
+            raise e
+
+    async def translate(self, request: TranslationRequest) -> TranslationResponse:
+        """
+        Translate text to target language using Gemini API.
+        """
+        logger.info(f"Translating {len(request.text)} characters to {request.target_language}")
+
+        try:
+            # Create translation prompt
+            language_name = request.target_language.title()
+            prompt = f"""Translate the following English text to {language_name}.
+
+Preserve the structure and formatting. Keep technical terms in English if they don't have good {language_name} equivalents.
+
+Text to translate:
+{request.text}
+
+Provide ONLY the translated text, without any explanations or additional commentary."""
+
+            # Use Gemini for translation
+            translated = self.ai_client.chat(
+                message=prompt,
+                context=""
+            )
+
+            return TranslationResponse(
+                translated_text=translated,
+                source_language="english",
+                target_language=request.target_language,
+                character_count=len(translated)
+            )
+
+        except Exception as e:
+            logger.error(f"Error translating text: {str(e)}")
             raise e
