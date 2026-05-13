@@ -1,6 +1,6 @@
 import asyncio
 import uuid
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from utils.client_factory import AIClientFactory
 from utils.vector_store import VectorStore
 from utils.text_processor import TextProcessor
@@ -11,20 +11,62 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+_LANG_CODES = {
+    "ur": "ur",
+    "urdu": "ur",
+    "es": "es",
+    "spanish": "es",
+    "fr": "fr",
+    "french": "fr",
+    "de": "de",
+    "german": "de",
+    "ar": "ar",
+    "arabic": "ar",
+    "zh": "zh-CN",
+    "chinese": "zh-CN",
+    "hi": "hi",
+    "hindi": "hi",
+}
+
+
+def _google_translate(text: str, target_lang: str) -> str:
+    from deep_translator import GoogleTranslator
+    lang_code = _LANG_CODES.get(target_lang.lower(), target_lang)
+    translated = GoogleTranslator(source="auto", target=lang_code).translate(text)
+    return translated or text
+
+
 class RAGService:
     def __init__(self):
         self.ai_client = AIClientFactory.create_client()
         self.vector_store = VectorStore()
         self.db_manager = DatabaseManager()
 
+    async def translate_text(self, text: str, target_language: str) -> str:
+        try:
+            # Try Cohere first
+            prompt = (
+                f"Translate the following text to {target_language}. "
+                f"Return ONLY the translated text, no explanations or notes.\n\n"
+                f"Text to translate:\n{text}"
+            )
+            result = self.ai_client.generate_response(prompt, max_tokens=2000)
+            if result and result.strip():
+                return result.strip()
+        except Exception as e:
+            logger.warning(f"Cohere translation failed ({str(e)[:80]}), falling back to Google Translate")
+
+        # Silent fallback to Google Translate (deep-translator)
+        try:
+            return _google_translate(text, target_language)
+        except Exception as e:
+            logger.error(f"Google Translate fallback also failed: {str(e)}")
+            return text  # Return original text if all translation fails
+
     async def ingest_book(self, request: IngestionRequest) -> Dict[str, Any]:
-        """
-        Process and ingest a book into the vector database.
-        """
         logger.info(f"Starting ingestion for book: {request.book_id}")
 
         try:
-            # Determine file type and process accordingly
             import os
             file_ext = os.path.splitext(request.file_path)[1].lower()
 
@@ -37,12 +79,10 @@ class RAGService:
             else:
                 raise ValueError(f"Unsupported file type: {file_ext}")
 
-            # Process each page/chapter into chunks
             all_chunks = []
             total_chunks = 0
 
             for page_num, page_text in pages:
-                # Split page text into chunks
                 text_chunks = TextProcessor.chunk_text(
                     page_text,
                     chunk_size=request.chunk_size,
@@ -50,11 +90,9 @@ class RAGService:
                 )
 
                 for chunk_text in text_chunks:
-                    # Create embedding for the chunk
                     embeddings = self.ai_client.embed_texts([chunk_text], input_type="search_document")
                     embedding = embeddings[0] if embeddings else []
 
-                    # Create chunk object
                     chunk = Chunk(
                         id=str(uuid.uuid4()),
                         book_id=request.book_id,
@@ -69,7 +107,6 @@ class RAGService:
                     all_chunks.append(chunk)
                     total_chunks += 1
 
-            # Add all chunks to vector store
             self.vector_store.add_chunks(all_chunks)
 
             logger.info(f"Successfully ingested book: {request.book_id} with {total_chunks} chunks")
@@ -86,40 +123,34 @@ class RAGService:
             raise e
 
     async def query(self, request: QueryRequest) -> QueryResponse:
-        """
-        Query the RAG system with a question about the book.
-        Can optionally include user-selected text for ad-hoc queries.
-        """
         logger.info(f"Processing query for book: {request.book_id}")
 
         try:
-            # Generate embedding for the query
             query_texts = [request.query]
             if request.user_selected_text:
                 query_texts.append(request.user_selected_text)
 
             query_embeddings = self.ai_client.embed_texts(query_texts, input_type="search_query")
-            query_embedding = query_embeddings[0]  # Use the main query for search
+            query_embedding = query_embeddings[0]
 
-            # Search for relevant chunks in the vector store
             relevant_chunks = self.vector_store.search(
                 query_embedding=query_embedding,
                 book_id=request.book_id,
-                limit=5  # Retrieve top 5 most relevant chunks
+                limit=5
             )
 
-            # Build context from retrieved chunks
             context_parts = []
             for chunk in relevant_chunks:
                 context_parts.append(f"Page {chunk['page_number']}: {chunk['content']}")
 
             context = "\n\n".join(context_parts)
 
-            # If no relevant context is found, set a default context
             if not context.strip():
-                context = "You are an AI assistant for a Physical AI and Humanoid Robotics textbook. The user has asked a general question that is not directly related to specific textbook content."
+                context = ""
 
-            # Generate response using configured AI client
+            answer = ""
+
+            # Tier 1: Primary AI client (Cohere)
             try:
                 if request.user_selected_text:
                     answer = self.ai_client.chat(
@@ -132,18 +163,57 @@ class RAGService:
                         message=request.query,
                         context=context
                     )
+                if answer:
+                    logger.info("Answer generated via primary AI client")
             except Exception as e:
-                logger.exception(f"An exception occurred during the AI chat API call: {str(e)}")
-                # Provide a fallback response when AI API fails
-                if "greeting" in request.query.lower() or request.query.lower() in ["hi", "hello", "hey"]:
-                    answer = "Hello! I'm your AI assistant for the Physical AI and Humanoid Robotics textbook. How can I help you with questions about the book content?"
-                elif len(request.query.strip().split()) <= 3:  # Simple short questions
-                    # For very simple questions like "what is AI?", provide a more helpful response
-                    answer = f"I understand you're asking '{request.query}'. I'm designed to answer questions based on the Physical AI and Humanoid Robotics textbook content. Since no specific textbook content was found for your query, I recommend asking more specific questions about the textbook material for better answers."
-                elif relevant_chunks:  # If we found relevant context but API failed, provide that info
-                    answer = f"I found some relevant information about your question '{request.query}', but I'm having trouble generating a response right now. The textbook covers this topic in pages {relevant_chunks[0]['page_number']} and related content. Please try asking more specific questions about the textbook material."
+                logger.warning(f"Primary AI client failed ({str(e)[:80]})")
+
+            # Tier 2: Groq fallback (free — 500 req/day, very fast, llama-3.3-70b)
+            if not answer:
+                try:
+                    from utils.groq_client import GroqClient
+                    if settings.groq_api_key:
+                        groq_client = GroqClient()
+                        answer = groq_client.chat(
+                            message=request.query,
+                            context=context,
+                            selected_text=request.user_selected_text or ""
+                        )
+                        if answer:
+                            logger.info("Answer generated via Groq fallback")
+                except Exception as ge:
+                    logger.warning(f"Groq fallback failed ({str(ge)[:80]})")
+
+            # Tier 3: Gemini fallback
+            if not answer:
+                try:
+                    from utils.gemini_client import GeminiClient
+                    if settings.gemini_api_key:
+                        gemini_client = GeminiClient()
+                        answer = gemini_client.chat(
+                            message=request.query,
+                            context=context,
+                            selected_text=request.user_selected_text or ""
+                        )
+                        if answer:
+                            logger.info("Answer generated via Gemini fallback")
+                except Exception as gme:
+                    logger.warning(f"Gemini fallback failed ({str(gme)[:80]})")
+
+            # Tier 4: Raw chunk text as last resort
+            if not answer:
+                if request.query.lower() in ["hi", "hello", "hey"]:
+                    answer = "Hello! I'm your AI assistant for the Physical AI and Humanoid Robotics textbook. How can I help you?"
+                elif relevant_chunks:
+                    answer = (
+                        f"Here is relevant information from the textbook about your question:\n\n"
+                        + "\n\n".join(context_parts[:2])
+                    )
                 else:
-                    answer = "I'm having trouble processing your request at the moment. Please try rephrasing your question about the textbook content."
+                    answer = (
+                        "I'm having trouble generating a response right now. "
+                        "Please try rephrasing your question about the textbook content."
+                    )
 
             # Format sources
             sources = []
@@ -154,17 +224,13 @@ class RAGService:
                     "relevance_score": chunk["score"]
                 })
 
-            # Calculate tokens used (approximate)
             tokens_used = len(answer.split()) if answer else 0
 
-            # Store the conversation in the database (async operation)
-            # For now, we'll use a simple session ID based on book_id
             session_id = f"{request.book_id}_default_session"
             self.db_manager.add_message(session_id, "user", request.query)
             self.db_manager.add_message(session_id, "assistant", answer)
 
-            # Calculate confidence based on relevance scores
-            confidence = 0.5  # Default confidence
+            confidence = 0.5
             if relevant_chunks:
                 confidence = min(1.0, max(0.0, relevant_chunks[0]["score"]))
 

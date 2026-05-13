@@ -5,7 +5,7 @@ import os
 import logging
 
 from config.settings import settings
-from models.schemas import QueryRequest, QueryResponse, IngestionRequest
+from models.schemas import QueryRequest, QueryResponse, IngestionRequest, TranslationRequest, TranslationResponse
 from api.rag_service import RAGService
 from utils.helpers import sanitize_filename
 
@@ -75,6 +75,16 @@ async def upload_file(file: UploadFile = File(...)):
     except Exception as e:
         logger.error(f"Error uploading file: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error uploading file: {str(e)}")
+
+@app.post("/translate", response_model=TranslationResponse, summary="Translate text to a target language")
+async def translate_text(request: TranslationRequest):
+    try:
+        logger.info(f"Translating to {request.target_language}, text length: {len(request.text)}")
+        translated = await rag_service.translate_text(request.text, request.target_language)
+        return TranslationResponse(translated_text=translated, target_language=request.target_language)
+    except Exception as e:
+        logger.error(f"Error translating text: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Translation error: {str(e)}")
 
 @app.get("/health")
 async def health_check():
