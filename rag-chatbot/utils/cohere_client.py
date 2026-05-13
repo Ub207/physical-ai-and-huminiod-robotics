@@ -54,17 +54,19 @@ class CohereClient:
         """
         Generate a response for the RAG chatbot with context.
         """
-        # Build the full prompt with context
+        system = (
+            "You are an expert AI tutor for a Physical AI and Humanoid Robotics textbook. "
+            "Answer the student's question clearly and in detail using the provided textbook context. "
+            "Structure your answer with: a direct definition or explanation first, then key points, then examples if relevant. "
+            "Do NOT say 'the context says' or 'according to the context'. Just answer naturally. "
+            "If the context does not cover the question, answer from your general knowledge about robotics/AI."
+        )
         if context.strip():
-            full_prompt = f"Context: {context}\n\n"
+            full_prompt = f"{system}\n\nTextbook Context:\n{context}\n\n"
         else:
-            # Provide a default context when no relevant context is found
-            full_prompt = "You are an AI assistant for a Physical AI and Humanoid Robotics textbook. "
-            full_prompt += "The following is a general question not directly related to specific textbook content.\n\n"
-
+            full_prompt = f"{system}\n\n"
         if selected_text:
-            full_prompt += f"User-selected text: {selected_text}\n\n"
-        full_prompt += f"Question: {message}\n\n"
-        full_prompt += "Please answer the question based on the provided context. If no specific textbook context is available, acknowledge the question and encourage the user to ask more specific questions about the Physical AI and Humanoid Robotics textbook content. Be concise and accurate."
+            full_prompt += f"Selected text the student is asking about:\n{selected_text}\n\n"
+        full_prompt += f"Student's question: {message}\n\nAnswer:"
 
         return self.generate_response(full_prompt)

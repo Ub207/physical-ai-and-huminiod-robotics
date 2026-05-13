@@ -14,6 +14,9 @@ class Settings(BaseSettings):
     cohere_embed_model: str = os.getenv("COHERE_EMBED_MODEL", "embed-english-v3.0")
     cohere_generation_model: str = os.getenv("COHERE_GENERATION_MODEL", "command-r-plus")
 
+    # Groq Configuration
+    groq_api_key: str = os.getenv("GROQ_API_KEY", "")
+
     # Gemini Configuration
     gemini_api_key: str = os.getenv("GEMINI_API_KEY", "")
     gemini_embed_model: str = os.getenv("GEMINI_EMBED_MODEL", "embedding-001")

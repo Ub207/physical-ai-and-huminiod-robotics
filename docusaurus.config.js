@@ -14,7 +14,7 @@ const config = {
   // IMPORTANT: url should be ONLY the domain, no paths like /new/import
   url: 'https://physical-robotics-pi.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For Vercel deployment, use '/' to serve at root
+  // For local dev use '/physical-ai-humanoid-robotics/', for Vercel use '/'
   baseUrl: '/',
 
   // GitHub pages deployment config (not needed for Vercel, but kept for reference)
@@ -57,6 +57,38 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      headTags: [
+        // Urdu fonts for better RTL support
+        {
+          tagName: 'link',
+          attributes: {
+            rel: 'preconnect',
+            href: 'https://fonts.googleapis.com',
+          },
+        },
+        {
+          tagName: 'link',
+          attributes: {
+            rel: 'preconnect',
+            href: 'https://fonts.gstatic.com',
+            crossorigin: '',
+          },
+        },
+        {
+          tagName: 'link',
+          attributes: {
+            href: 'https://fonts.googleapis.com/css2?family=Jameel+Noori+Nastaleeq&display=swap',
+            rel: 'stylesheet',
+          },
+        },
+        {
+          tagName: 'link',
+          attributes: {
+            href: 'https://fonts.googleapis.com/css2?family=Lateef:wght@400;700&display=swap',
+            rel: 'stylesheet',
+          },
+        },
+      ],
       navbar: {
         title: 'Physical AI & Humanoid Robotics',
         logo: {

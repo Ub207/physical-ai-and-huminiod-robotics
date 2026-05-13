@@ -119,7 +119,10 @@ class RAGService:
             if not context.strip():
                 context = "You are an AI assistant for a Physical AI and Humanoid Robotics textbook. The user has asked a general question that is not directly related to specific textbook content."
 
-            # Generate response using configured AI client
+            # Generate response — try primary AI, then Gemini fallback, then raw text
+            answer = None
+
+            # Primary: configured AI client (Cohere)
             try:
                 if request.user_selected_text:
                     answer = self.ai_client.chat(
@@ -132,18 +135,58 @@ class RAGService:
                         message=request.query,
                         context=context
                     )
+                logger.info("Answer generated via primary AI (Cohere)")
             except Exception as e:
-                logger.exception(f"An exception occurred during the AI chat API call: {str(e)}")
-                # Provide a fallback response when AI API fails
-                if "greeting" in request.query.lower() or request.query.lower() in ["hi", "hello", "hey"]:
-                    answer = "Hello! I'm your AI assistant for the Physical AI and Humanoid Robotics textbook. How can I help you with questions about the book content?"
-                elif len(request.query.strip().split()) <= 3:  # Simple short questions
-                    # For very simple questions like "what is AI?", provide a more helpful response
-                    answer = f"I understand you're asking '{request.query}'. I'm designed to answer questions based on the Physical AI and Humanoid Robotics textbook content. Since no specific textbook content was found for your query, I recommend asking more specific questions about the textbook material for better answers."
-                elif relevant_chunks:  # If we found relevant context but API failed, provide that info
-                    answer = f"I found some relevant information about your question '{request.query}', but I'm having trouble generating a response right now. The textbook covers this topic in pages {relevant_chunks[0]['page_number']} and related content. Please try asking more specific questions about the textbook material."
+                logger.warning(f"Primary AI failed ({str(e)[:80]}), trying Gemini fallback")
+
+            # Fallback 1: Groq (free — 500 req/day, very fast, llama-3.1-70b)
+            if not answer:
+                try:
+                    from utils.groq_client import GroqClient
+                    from config.settings import settings as _s
+                    if _s.groq_api_key:
+                        groq_client = GroqClient()
+                        answer = groq_client.chat(
+                            message=request.query,
+                            context=context,
+                            selected_text=request.user_selected_text or ""
+                        )
+                        logger.info("Answer generated via Groq fallback")
+                    else:
+                        logger.warning("GROQ_API_KEY not set — skipping Groq fallback")
+                except Exception as ge:
+                    logger.warning(f"Groq fallback failed ({str(ge)[:80]})")
+
+            # Fallback 2: Gemini Flash (free — 1500 req/day)
+            if not answer:
+                try:
+                    from utils.gemini_client import GeminiClient
+                    from config.settings import settings as _s
+                    if _s.gemini_api_key:
+                        gemini = GeminiClient()
+                        answer = gemini.chat(
+                            message=request.query,
+                            context=context,
+                            selected_text=request.user_selected_text or ""
+                        )
+                        logger.info("Answer generated via Gemini fallback")
+                    else:
+                        logger.warning("GEMINI_API_KEY not set — skipping Gemini fallback")
+                except Exception as ge:
+                    logger.warning(f"Gemini fallback failed ({str(ge)[:80]})")
+
+            # Fallback 2: show raw chunks (no LLM available)
+            if not answer:
+                q_lower = request.query.lower().strip()
+                if q_lower in ["hi", "hello", "hey", "salam", "السلام"]:
+                    answer = "Hello! I'm your AI assistant for the Physical AI and Humanoid Robotics textbook. How can I help you?"
+                elif relevant_chunks:
+                    lines = [f"Here is what the textbook says about **\"{request.query}\"**:\n"]
+                    for chunk in relevant_chunks[:3]:
+                        lines.append(f"**📖 Page {chunk['page_number']}:**\n{chunk['content'].strip()}\n")
+                    answer = "\n".join(lines)
                 else:
-                    answer = "I'm having trouble processing your request at the moment. Please try rephrasing your question about the textbook content."
+                    answer = f"I could not find information about '{request.query}' in the textbook. Please make sure the book has been indexed, or try a different question."
 
             # Format sources
             sources = []
@@ -179,37 +222,106 @@ class RAGService:
             logger.error(f"Error processing query for book {request.book_id}: {str(e)}")
             raise e
 
+    # Maps our language names to Google Translate language codes
+    _LANG_CODES = {
+        'urdu': 'ur',
+        'arabic': 'ar',
+        'french': 'fr',
+        'spanish': 'es',
+        'german': 'de',
+        'chinese': 'zh-CN',
+        'hindi': 'hi',
+    }
+
+    def _google_translate(self, text: str, target_lang: str) -> str:
+        """Free fallback translation using Google Translate via deep-translator."""
+        from deep_translator import GoogleTranslator
+        lang_code = self._LANG_CODES.get(target_lang, target_lang)
+        # Google Translate has a 5000-char limit per call; split if needed
+        if len(text) <= 4900:
+            return GoogleTranslator(source='auto', target=lang_code).translate(text)
+        # Split on sentence boundaries and translate in chunks
+        import re as _re
+        sentences = _re.split(r'(?<=[.!?])\s+', text)
+        chunks, current = [], ''
+        for s in sentences:
+            if len(current) + len(s) + 1 <= 4900:
+                current = (current + ' ' + s).strip()
+            else:
+                if current:
+                    chunks.append(current)
+                current = s
+        if current:
+            chunks.append(current)
+        translated_parts = [
+            GoogleTranslator(source='auto', target=lang_code).translate(chunk)
+            for chunk in chunks
+        ]
+        return ' '.join(translated_parts)
+
     async def translate(self, request: TranslationRequest) -> TranslationResponse:
-        """
-        Translate text to target language using Gemini API.
-        """
+        """Translate text to target language (Cohere primary, Google Translate fallback)."""
         logger.info(f"Translating {len(request.text)} characters to {request.target_language}")
 
+        import re as _re
+
+        # Strip HTML tags — send only plain text to the AI
+        plain_text = _re.sub(r'<[^>]+>', ' ', request.text)
+        plain_text = _re.sub(r'\s+', ' ', plain_text).strip()
+
+        # Cap at 3000 chars to stay within token limits
+        if len(plain_text) > 3000:
+            plain_text = plain_text[:3000]
+
+        target_lang = request.target_language.lower()
+        translated = None
+
+        # --- Primary: Cohere AI ---
         try:
-            # Create translation prompt
-            language_name = request.target_language.title()
-            prompt = f"""Translate the following English text to {language_name}.
+            if target_lang == 'urdu':
+                instructions = (
+                    "Translate the following text to Urdu using proper Arabic script (Nastaleeq). "
+                    "Keep technical terms like ROS 2, NVIDIA, Isaac, VLA in English. "
+                    "Output ONLY the Urdu translation, nothing else."
+                )
+            elif target_lang == 'arabic':
+                instructions = (
+                    "Translate the following text to Arabic. "
+                    "Keep technical terms in English. "
+                    "Output ONLY the Arabic translation, nothing else."
+                )
+            else:
+                instructions = (
+                    f"Translate the following text to {request.target_language}. "
+                    "Keep technical terms in English. Output ONLY the translation, nothing else."
+                )
+            prompt = f"{instructions}\n\nText:\n{plain_text}"
+            translated = self.ai_client.chat(message=prompt, context="")
+            logger.info("Translation completed via Cohere")
+        except Exception as ai_err:
+            err_str = str(ai_err)
+            is_rate_limit = "429" in err_str or "TooManyRequests" in err_str or "rate" in err_str.lower()
+            if is_rate_limit:
+                logger.warning("Cohere rate-limited — falling back to Google Translate")
+            else:
+                logger.warning(f"Cohere error — falling back to Google Translate: {err_str[:200]}")
 
-Preserve the structure and formatting. Keep technical terms in English if they don't have good {language_name} equivalents.
+        # --- Fallback: Google Translate (free, no API key) ---
+        if not translated:
+            try:
+                translated = self._google_translate(plain_text, target_lang)
+                logger.info("Translation completed via Google Translate (fallback)")
+            except Exception as gt_err:
+                logger.error(f"Google Translate fallback also failed: {gt_err}")
+                from fastapi import HTTPException as _HTTPException
+                raise _HTTPException(
+                    status_code=503,
+                    detail="Translation is temporarily unavailable. Please try again in a moment."
+                )
 
-Text to translate:
-{request.text}
-
-Provide ONLY the translated text, without any explanations or additional commentary."""
-
-            # Use Gemini for translation
-            translated = self.ai_client.chat(
-                message=prompt,
-                context=""
-            )
-
-            return TranslationResponse(
-                translated_text=translated,
-                source_language="english",
-                target_language=request.target_language,
-                character_count=len(translated)
-            )
-
-        except Exception as e:
-            logger.error(f"Error translating text: {str(e)}")
-            raise e
+        return TranslationResponse(
+            translated_text=translated,
+            source_language="english",
+            target_language=request.target_language,
+            character_count=len(translated)
+        )
