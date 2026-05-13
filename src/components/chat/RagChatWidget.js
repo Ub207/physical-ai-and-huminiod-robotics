@@ -220,7 +220,7 @@ function createChatWidgetScript(apiUrl, bookId) {
         .catch(error => {
           this.removeTypingIndicator(typingId);
           console.error('Chat API Error:', error);
-          this.addMessage("I'm having trouble connecting to the AI service. Please make sure the backend server is running on port 8001.", 'bot');
+          this.addMessage("I'm having trouble connecting to the AI service. Please make sure the backend server is running on port 8000.", 'bot');
         });
       };
 

@@ -5,7 +5,7 @@
   "source": "@site/docs/module4/conversational-robotics.md",
   "sourceDirName": "module4",
   "slug": "/module4/conversational-robotics",
-  "permalink": "/module4/conversational-robotics",
+  "permalink": "/physical-ai-humanoid-robotics/module4/conversational-robotics",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "VLA Models",
-    "permalink": "/module4/vla-models"
+    "permalink": "/physical-ai-humanoid-robotics/module4/vla-models"
   },
   "next": {
     "title": "VLA Exercises",
-    "permalink": "/module4/vla-exercises"
+    "permalink": "/physical-ai-humanoid-robotics/module4/vla-exercises"
   }
 }

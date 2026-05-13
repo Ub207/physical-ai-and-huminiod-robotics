@@ -262,3 +262,170 @@
     grid-template-columns: 1fr;
   }
 }
+/* ========================================
+   RTL (Right-to-Left) Support for Urdu
+   ======================================== */
+
+/* Base RTL styles - support both dir attribute and rtl-mode class */
+html[dir="rtl"],
+html.rtl-mode,
+body[dir="rtl"],
+body.rtl-mode {
+  direction: rtl;
+}
+
+/* Navbar RTL support */
+html[dir="rtl"] .navbar__items,
+html.rtl-mode .navbar__items,
+body[dir="rtl"] .navbar__items {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .navbar__item,
+html.rtl-mode .navbar__item,
+body[dir="rtl"] .navbar__item {
+  margin-left: 0;
+  margin-right: var(--ifm-navbar-item-padding-horizontal);
+}
+
+/* Markdown content RTL support - FORCE RIGHT ALIGN for all elements */
+html[dir="rtl"] .markdown,
+html[dir="rtl"] .markdown h1,
+html[dir="rtl"] .markdown h2,
+html[dir="rtl"] .markdown h3,
+html[dir="rtl"] .markdown h4,
+html[dir="rtl"] .markdown h5,
+html[dir="rtl"] .markdown h6,
+html[dir="rtl"] .markdown p,
+html[dir="rtl"] .markdown li,
+html[dir="rtl"] .markdown td,
+html[dir="rtl"] .markdown th,
+html[dir="rtl"] .markdown div,
+html[dir="rtl"] .markdown span,
+html.rtl-mode .markdown,
+html.rtl-mode .markdown h1,
+html.rtl-mode .markdown h2,
+html.rtl-mode .markdown h3,
+html.rtl-mode .markdown h4,
+html.rtl-mode .markdown h5,
+html.rtl-mode .markdown h6,
+html.rtl-mode .markdown p,
+html.rtl-mode .markdown li,
+html.rtl-mode .markdown td,
+html.rtl-mode .markdown th,
+html.rtl-mode .markdown div,
+html.rtl-mode .markdown span,
+body.rtl-mode .markdown,
+body.rtl-mode .markdown h1,
+body.rtl-mode .markdown h2,
+body.rtl-mode .markdown h3,
+body.rtl-mode .markdown h4,
+body.rtl-mode .markdown h5,
+body.rtl-mode .markdown h6,
+body.rtl-mode .markdown p,
+body.rtl-mode .markdown li,
+body.rtl-mode .markdown td,
+body.rtl-mode .markdown th,
+body.rtl-mode .markdown div,
+body.rtl-mode .markdown span {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* RTL headings with proper Urdu font */
+html[dir="rtl"] .markdown h1,
+html[dir="rtl"] .markdown h2,
+html[dir="rtl"] .markdown h3,
+html.rtl-mode .markdown h1,
+html.rtl-mode .markdown h2,
+html.rtl-mode .markdown h3 {
+  font-family: 'Jameel Noori Nastaleeq', 'Nastaleeq', 'Lateef', 'Arial', sans-serif;
+}
+
+/* RTL lists */
+html[dir="rtl"] .markdown ul,
+html[dir="rtl"] .markdown ol,
+html.rtl-mode .markdown ul,
+html.rtl-mode .markdown ol {
+  padding-right: 2rem;
+  padding-left: 0;
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+/* RTL tables */
+html[dir="rtl"] .markdown table,
+html.rtl-mode .markdown table {
+  direction: rtl;
+}
+
+html[dir="rtl"] .markdown th,
+html[dir="rtl"] .markdown td,
+html.rtl-mode .markdown th,
+html.rtl-mode .markdown td {
+  text-align: right !important;
+}
+
+/* RTL blockquotes */
+html[dir="rtl"] .markdown blockquote,
+html.rtl-mode .markdown blockquote {
+  border-right: 4px solid var(--ifm-color-primary);
+  border-left: none;
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+/* RTL code blocks - keep LTR for code */
+html[dir="rtl"] .markdown pre,
+html[dir="rtl"] .markdown code,
+html.rtl-mode .markdown pre,
+html.rtl-mode .markdown code {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Use CSS logical properties for universal support */
+.navbar__item {
+  margin-inline-start: var(--ifm-navbar-item-padding-horizontal);
+}
+
+.markdown ul,
+.markdown ol {
+  padding-inline-start: 2rem;
+}
+
+/* Table of Contents RTL */
+html[dir="rtl"] .table-of-contents,
+html.rtl-mode .table-of-contents {
+  text-align: right;
+}
+
+html[dir="rtl"] .table-of-contents__link,
+html.rtl-mode .table-of-contents__link {
+  padding-right: 0.5rem;
+  padding-left: 0;
+}
+
+/* Sidebar RTL */
+html[dir="rtl"] .menu__list-item,
+html.rtl-mode .menu__list-item {
+  text-align: right;
+}
+
+/* RTL admonitions */
+html[dir="rtl"] .admonition,
+html.rtl-mode .admonition {
+  direction: rtl;
+}
+
+html[dir="rtl"] .admonition-heading,
+html.rtl-mode .admonition-heading {
+  text-align: right;
+}
+
+/* Language indicator for RTL */
+html[dir="rtl"] .language-indicator,
+html.rtl-mode .language-indicator {
+  direction: rtl;
+}
+

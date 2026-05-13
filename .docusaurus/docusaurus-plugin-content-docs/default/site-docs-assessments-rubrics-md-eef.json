@@ -5,7 +5,7 @@
   "source": "@site/docs/assessments/rubrics.md",
   "sourceDirName": "assessments",
   "slug": "/assessments/rubrics",
-  "permalink": "/assessments/rubrics",
+  "permalink": "/physical-ai-humanoid-robotics/assessments/rubrics",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Midterm Assessment",
-    "permalink": "/assessments/midterm"
+    "permalink": "/physical-ai-humanoid-robotics/assessments/midterm"
   },
   "next": {
     "title": "Hardware Requirements Overview",
-    "permalink": "/hardware/introduction"
+    "permalink": "/physical-ai-humanoid-robotics/hardware/introduction"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/weekly-breakdown/week-3-4.md",
   "sourceDirName": "weekly-breakdown",
   "slug": "/weekly-breakdown/week-3-4",
-  "permalink": "/weekly-breakdown/week-3-4",
+  "permalink": "/physical-ai-humanoid-robotics/weekly-breakdown/week-3-4",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Week 1-2: Foundations of Physical AI",
-    "permalink": "/weekly-breakdown/week-1-2"
+    "permalink": "/physical-ai-humanoid-robotics/weekly-breakdown/week-1-2"
   },
   "next": {
     "title": "Week 5-6: Digital Twin Fundamentals (Gazebo)",
-    "permalink": "/weekly-breakdown/week-5-6"
+    "permalink": "/physical-ai-humanoid-robotics/weekly-breakdown/week-5-6"
   }
 }

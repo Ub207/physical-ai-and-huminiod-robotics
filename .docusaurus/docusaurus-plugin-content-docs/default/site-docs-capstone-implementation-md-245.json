@@ -5,7 +5,7 @@
   "source": "@site/docs/capstone/implementation.md",
   "sourceDirName": "capstone",
   "slug": "/capstone/implementation",
-  "permalink": "/capstone/implementation",
+  "permalink": "/physical-ai-humanoid-robotics/capstone/implementation",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Capstone Project Requirements",
-    "permalink": "/capstone/project-requirements"
+    "permalink": "/physical-ai-humanoid-robotics/capstone/project-requirements"
   },
   "next": {
     "title": "Capstone Results and Evaluation",
-    "permalink": "/capstone/results"
+    "permalink": "/physical-ai-humanoid-robotics/capstone/results"
   }
 }

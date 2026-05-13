@@ -5,7 +5,7 @@
   "source": "@site/docs/module4/vla-exercises.md",
   "sourceDirName": "module4",
   "slug": "/module4/vla-exercises",
-  "permalink": "/module4/vla-exercises",
+  "permalink": "/physical-ai-humanoid-robotics/module4/vla-exercises",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Conversational Robotics",
-    "permalink": "/module4/conversational-robotics"
+    "permalink": "/physical-ai-humanoid-robotics/module4/conversational-robotics"
   },
   "next": {
     "title": "Capstone Project - Autonomous Humanoid Robot",
-    "permalink": "/capstone/introduction"
+    "permalink": "/physical-ai-humanoid-robotics/capstone/introduction"
   }
 }

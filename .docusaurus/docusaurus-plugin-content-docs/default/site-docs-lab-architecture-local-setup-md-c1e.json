@@ -5,7 +5,7 @@
   "source": "@site/docs/lab-architecture/local-setup.md",
   "sourceDirName": "lab-architecture",
   "slug": "/lab-architecture/local-setup",
-  "permalink": "/lab-architecture/local-setup",
+  "permalink": "/physical-ai-humanoid-robotics/lab-architecture/local-setup",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Actuator Specifications",
-    "permalink": "/hardware/actuator-specifications"
+    "permalink": "/physical-ai-humanoid-robotics/hardware/actuator-specifications"
   },
   "next": {
     "title": "Cloud Architecture Options",
-    "permalink": "/lab-architecture/cloud-options"
+    "permalink": "/physical-ai-humanoid-robotics/lab-architecture/cloud-options"
   }
 }

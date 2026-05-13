@@ -1,213 +1,213 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/",
+      "path": "/physical-ai-humanoid-robotics/",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/",
+          "path": "/physical-ai-humanoid-robotics/",
           "mainDocId": "introduction",
           "docs": [
             {
               "id": "assessments/introduction",
-              "path": "/assessments/introduction",
+              "path": "/physical-ai-humanoid-robotics/assessments/introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "assessments/midterm",
-              "path": "/assessments/midterm",
+              "path": "/physical-ai-humanoid-robotics/assessments/midterm",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "assessments/rubrics",
-              "path": "/assessments/rubrics",
+              "path": "/physical-ai-humanoid-robotics/assessments/rubrics",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "capstone/implementation",
-              "path": "/capstone/implementation",
+              "path": "/physical-ai-humanoid-robotics/capstone/implementation",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "capstone/introduction",
-              "path": "/capstone/introduction",
+              "path": "/physical-ai-humanoid-robotics/capstone/introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "capstone/project-requirements",
-              "path": "/capstone/project-requirements",
+              "path": "/physical-ai-humanoid-robotics/capstone/project-requirements",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "capstone/results",
-              "path": "/capstone/results",
+              "path": "/physical-ai-humanoid-robotics/capstone/results",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "hardware/actuator-specifications",
-              "path": "/hardware/actuator-specifications",
+              "path": "/physical-ai-humanoid-robotics/hardware/actuator-specifications",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "hardware/compute-requirements",
-              "path": "/hardware/compute-requirements",
+              "path": "/physical-ai-humanoid-robotics/hardware/compute-requirements",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "hardware/introduction",
-              "path": "/hardware/introduction",
+              "path": "/physical-ai-humanoid-robotics/hardware/introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "hardware/sensor-specifications",
-              "path": "/hardware/sensor-specifications",
+              "path": "/physical-ai-humanoid-robotics/hardware/sensor-specifications",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "introduction",
-              "path": "/introduction",
+              "path": "/physical-ai-humanoid-robotics/introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "lab-architecture/cloud-options",
-              "path": "/lab-architecture/cloud-options",
+              "path": "/physical-ai-humanoid-robotics/lab-architecture/cloud-options",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "lab-architecture/containerization",
-              "path": "/lab-architecture/containerization",
+              "path": "/physical-ai-humanoid-robotics/lab-architecture/containerization",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "lab-architecture/local-setup",
-              "path": "/lab-architecture/local-setup",
+              "path": "/physical-ai-humanoid-robotics/lab-architecture/local-setup",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "learning-outcomes",
-              "path": "/learning-outcomes",
+              "path": "/physical-ai-humanoid-robotics/learning-outcomes",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module1/introduction",
-              "path": "/module1/introduction",
+              "path": "/physical-ai-humanoid-robotics/module1/introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module1/ros2-architecture",
-              "path": "/module1/ros2-architecture",
+              "path": "/physical-ai-humanoid-robotics/module1/ros2-architecture",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module1/ros2-concepts",
-              "path": "/module1/ros2-concepts",
+              "path": "/physical-ai-humanoid-robotics/module1/ros2-concepts",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module1/ros2-exercises",
-              "path": "/module1/ros2-exercises",
+              "path": "/physical-ai-humanoid-robotics/module1/ros2-exercises",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module1/ros2-packages",
-              "path": "/module1/ros2-packages",
+              "path": "/physical-ai-humanoid-robotics/module1/ros2-packages",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module2/digital-twin-exercises",
-              "path": "/module2/digital-twin-exercises",
+              "path": "/physical-ai-humanoid-robotics/module2/digital-twin-exercises",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module2/gazebo-simulation",
-              "path": "/module2/gazebo-simulation",
+              "path": "/physical-ai-humanoid-robotics/module2/gazebo-simulation",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module2/introduction",
-              "path": "/module2/introduction",
+              "path": "/physical-ai-humanoid-robotics/module2/introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module2/unity-integration",
-              "path": "/module2/unity-integration",
+              "path": "/physical-ai-humanoid-robotics/module2/unity-integration",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module3/ai-models",
-              "path": "/module3/ai-models",
+              "path": "/physical-ai-humanoid-robotics/module3/ai-models",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module3/introduction",
-              "path": "/module3/introduction",
+              "path": "/physical-ai-humanoid-robotics/module3/introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module3/isaac-architecture",
-              "path": "/module3/isaac-architecture",
+              "path": "/physical-ai-humanoid-robotics/module3/isaac-architecture",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module3/robot-control",
-              "path": "/module3/robot-control",
+              "path": "/physical-ai-humanoid-robotics/module3/robot-control",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module4/conversational-robotics",
-              "path": "/module4/conversational-robotics",
+              "path": "/physical-ai-humanoid-robotics/module4/conversational-robotics",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module4/introduction",
-              "path": "/module4/introduction",
+              "path": "/physical-ai-humanoid-robotics/module4/introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module4/vla-exercises",
-              "path": "/module4/vla-exercises",
+              "path": "/physical-ai-humanoid-robotics/module4/vla-exercises",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module4/vla-models",
-              "path": "/module4/vla-models",
+              "path": "/physical-ai-humanoid-robotics/module4/vla-models",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "weekly-breakdown/week-1-2",
-              "path": "/weekly-breakdown/week-1-2",
+              "path": "/physical-ai-humanoid-robotics/weekly-breakdown/week-1-2",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "weekly-breakdown/week-11-12",
-              "path": "/weekly-breakdown/week-11-12",
+              "path": "/physical-ai-humanoid-robotics/weekly-breakdown/week-11-12",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "weekly-breakdown/week-3-4",
-              "path": "/weekly-breakdown/week-3-4",
+              "path": "/physical-ai-humanoid-robotics/weekly-breakdown/week-3-4",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "weekly-breakdown/week-5-6",
-              "path": "/weekly-breakdown/week-5-6",
+              "path": "/physical-ai-humanoid-robotics/weekly-breakdown/week-5-6",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "weekly-breakdown/week-7-8",
-              "path": "/weekly-breakdown/week-7-8",
+              "path": "/physical-ai-humanoid-robotics/weekly-breakdown/week-7-8",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "weekly-breakdown/week-9-10",
-              "path": "/weekly-breakdown/week-9-10",
+              "path": "/physical-ai-humanoid-robotics/weekly-breakdown/week-9-10",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "why-physical-ai-matters",
-              "path": "/why-physical-ai-matters",
+              "path": "/physical-ai-humanoid-robotics/why-physical-ai-matters",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -215,7 +215,7 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/introduction",
+                "path": "/physical-ai-humanoid-robotics/introduction",
                 "label": "introduction"
               }
             }

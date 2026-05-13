@@ -1,0 +1,14 @@
+/**
+ * Navbar Content Styles
+ */
+
+.colorModeToggle {
+  margin-right: 0.5rem;
+}
+
+/* Mobile responsive - vertical stack (FR-018) */
+@media (max-width: 768px) {
+  .colorModeToggle {
+    margin-right: 0.3rem;
+  }
+}

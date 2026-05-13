@@ -14,7 +14,7 @@
       "path": "en",
       "translate": false,
       "url": "https://physical-robotics-pi.vercel.app",
-      "baseUrl": "/"
+      "baseUrl": "/physical-ai-humanoid-robotics/"
     }
   }
 }

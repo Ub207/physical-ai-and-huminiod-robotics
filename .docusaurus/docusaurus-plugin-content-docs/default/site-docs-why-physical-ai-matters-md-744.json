@@ -5,7 +5,7 @@
   "source": "@site/docs/why-physical-ai-matters.md",
   "sourceDirName": ".",
   "slug": "/why-physical-ai-matters",
-  "permalink": "/why-physical-ai-matters",
+  "permalink": "/physical-ai-humanoid-robotics/why-physical-ai-matters",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Introduction",
-    "permalink": "/introduction"
+    "permalink": "/physical-ai-humanoid-robotics/introduction"
   },
   "next": {
     "title": "Learning Outcomes",
-    "permalink": "/learning-outcomes"
+    "permalink": "/physical-ai-humanoid-robotics/learning-outcomes"
   }
 }

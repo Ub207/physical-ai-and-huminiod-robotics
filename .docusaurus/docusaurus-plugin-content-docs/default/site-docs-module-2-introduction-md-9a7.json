@@ -5,7 +5,7 @@
   "source": "@site/docs/module2/introduction.md",
   "sourceDirName": "module2",
   "slug": "/module2/introduction",
-  "permalink": "/module2/introduction",
+  "permalink": "/physical-ai-humanoid-robotics/module2/introduction",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "ROS 2 Exercises",
-    "permalink": "/module1/ros2-exercises"
+    "permalink": "/physical-ai-humanoid-robotics/module1/ros2-exercises"
   },
   "next": {
     "title": "Gazebo Simulation",
-    "permalink": "/module2/gazebo-simulation"
+    "permalink": "/physical-ai-humanoid-robotics/module2/gazebo-simulation"
   }
 }

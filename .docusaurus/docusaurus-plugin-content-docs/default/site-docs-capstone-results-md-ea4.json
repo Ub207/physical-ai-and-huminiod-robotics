@@ -5,7 +5,7 @@
   "source": "@site/docs/capstone/results.md",
   "sourceDirName": "capstone",
   "slug": "/capstone/results",
-  "permalink": "/capstone/results",
+  "permalink": "/physical-ai-humanoid-robotics/capstone/results",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Capstone Implementation",
-    "permalink": "/capstone/implementation"
+    "permalink": "/physical-ai-humanoid-robotics/capstone/implementation"
   },
   "next": {
     "title": "Assessments Overview",
-    "permalink": "/assessments/introduction"
+    "permalink": "/physical-ai-humanoid-robotics/assessments/introduction"
   }
 }

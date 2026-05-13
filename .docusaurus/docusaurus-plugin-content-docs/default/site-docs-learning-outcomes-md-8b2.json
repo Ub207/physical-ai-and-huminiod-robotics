@@ -5,7 +5,7 @@
   "source": "@site/docs/learning-outcomes.md",
   "sourceDirName": ".",
   "slug": "/learning-outcomes",
-  "permalink": "/learning-outcomes",
+  "permalink": "/physical-ai-humanoid-robotics/learning-outcomes",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Why Physical AI Matters",
-    "permalink": "/why-physical-ai-matters"
+    "permalink": "/physical-ai-humanoid-robotics/why-physical-ai-matters"
   },
   "next": {
     "title": "Week 1-2: Foundations of Physical AI",
-    "permalink": "/weekly-breakdown/week-1-2"
+    "permalink": "/physical-ai-humanoid-robotics/weekly-breakdown/week-1-2"
   }
 }

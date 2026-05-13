@@ -9,23 +9,34 @@ logger = logging.getLogger(__name__)
 
 class VectorStore:
     def __init__(self):
-        # Check if Qdrant settings are provided
-        if not settings.qdrant_url or not settings.qdrant_api_key:
-            logger.warning("Qdrant configuration not provided. Vector store will not function.")
-            self.client = None
-            self.collection_name = settings.qdrant_collection_name
-            return
+        self.collection_name = settings.qdrant_collection_name
 
-        try:
-            self.client = qdrant_client.QdrantClient(
-                url=settings.qdrant_url,
-                api_key=settings.qdrant_api_key,
-            )
-            self.collection_name = settings.qdrant_collection_name
-            self._ensure_collection_exists()
-        except Exception as e:
-            logger.error(f"Failed to connect to Qdrant: {e}")
-            self.client = None
+        # Try cloud Qdrant first, fall back to local embedded storage
+        if settings.qdrant_url and settings.qdrant_api_key:
+            try:
+                url = settings.qdrant_url
+                kwargs = dict(
+                    url=url,
+                    api_key=settings.qdrant_api_key,
+                    check_compatibility=False,
+                )
+                if url.startswith("https://") and ":" not in url[8:]:
+                    kwargs["port"] = 443
+                self.client = qdrant_client.QdrantClient(**kwargs)
+                # Verify the cloud cluster is actually reachable
+                self.client.get_collections()
+                logger.info("Connected to Qdrant Cloud")
+                self._ensure_collection_exists()
+                return
+            except Exception as e:
+                logger.warning(f"Qdrant Cloud unavailable ({e}). Falling back to local storage.")
+
+        # Local persistent fallback — survives restarts
+        import os
+        local_path = os.path.join(os.path.dirname(__file__), "..", "qdrant_local")
+        logger.info(f"Using local Qdrant storage at: {local_path}")
+        self.client = qdrant_client.QdrantClient(path=local_path)
+        self._ensure_collection_exists()
 
     def _ensure_collection_exists(self):
         """

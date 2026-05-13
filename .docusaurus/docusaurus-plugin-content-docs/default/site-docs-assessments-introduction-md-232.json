@@ -5,7 +5,7 @@
   "source": "@site/docs/assessments/introduction.md",
   "sourceDirName": "assessments",
   "slug": "/assessments/introduction",
-  "permalink": "/assessments/introduction",
+  "permalink": "/physical-ai-humanoid-robotics/assessments/introduction",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Capstone Results and Evaluation",
-    "permalink": "/capstone/results"
+    "permalink": "/physical-ai-humanoid-robotics/capstone/results"
   },
   "next": {
     "title": "Midterm Assessment",
-    "permalink": "/assessments/midterm"
+    "permalink": "/physical-ai-humanoid-robotics/assessments/midterm"
   }
 }

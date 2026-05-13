@@ -5,7 +5,7 @@
   "source": "@site/docs/hardware/introduction.md",
   "sourceDirName": "hardware",
   "slug": "/hardware/introduction",
-  "permalink": "/hardware/introduction",
+  "permalink": "/physical-ai-humanoid-robotics/hardware/introduction",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Assessment Rubrics",
-    "permalink": "/assessments/rubrics"
+    "permalink": "/physical-ai-humanoid-robotics/assessments/rubrics"
   },
   "next": {
     "title": "Compute Requirements",
-    "permalink": "/hardware/compute-requirements"
+    "permalink": "/physical-ai-humanoid-robotics/hardware/compute-requirements"
   }
 }

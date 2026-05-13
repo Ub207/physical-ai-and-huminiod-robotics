@@ -5,7 +5,7 @@
   "source": "@site/docs/capstone/project-requirements.md",
   "sourceDirName": "capstone",
   "slug": "/capstone/project-requirements",
-  "permalink": "/capstone/project-requirements",
+  "permalink": "/physical-ai-humanoid-robotics/capstone/project-requirements",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Capstone Project - Autonomous Humanoid Robot",
-    "permalink": "/capstone/introduction"
+    "permalink": "/physical-ai-humanoid-robotics/capstone/introduction"
   },
   "next": {
     "title": "Capstone Implementation",
-    "permalink": "/capstone/implementation"
+    "permalink": "/physical-ai-humanoid-robotics/capstone/implementation"
   }
 }

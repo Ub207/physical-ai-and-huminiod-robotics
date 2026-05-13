@@ -5,7 +5,7 @@
   "source": "@site/docs/hardware/compute-requirements.md",
   "sourceDirName": "hardware",
   "slug": "/hardware/compute-requirements",
-  "permalink": "/hardware/compute-requirements",
+  "permalink": "/physical-ai-humanoid-robotics/hardware/compute-requirements",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Hardware Requirements Overview",
-    "permalink": "/hardware/introduction"
+    "permalink": "/physical-ai-humanoid-robotics/hardware/introduction"
   },
   "next": {
     "title": "Sensor Specifications",
-    "permalink": "/hardware/sensor-specifications"
+    "permalink": "/physical-ai-humanoid-robotics/hardware/sensor-specifications"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/module2/unity-integration.md",
   "sourceDirName": "module2",
   "slug": "/module2/unity-integration",
-  "permalink": "/module2/unity-integration",
+  "permalink": "/physical-ai-humanoid-robotics/module2/unity-integration",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Gazebo Simulation",
-    "permalink": "/module2/gazebo-simulation"
+    "permalink": "/physical-ai-humanoid-robotics/module2/gazebo-simulation"
   },
   "next": {
     "title": "Digital Twin Exercises",
-    "permalink": "/module2/digital-twin-exercises"
+    "permalink": "/physical-ai-humanoid-robotics/module2/digital-twin-exercises"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/module3/ai-models.md",
   "sourceDirName": "module3",
   "slug": "/module3/ai-models",
-  "permalink": "/module3/ai-models",
+  "permalink": "/physical-ai-humanoid-robotics/module3/ai-models",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Isaac Architecture",
-    "permalink": "/module3/isaac-architecture"
+    "permalink": "/physical-ai-humanoid-robotics/module3/isaac-architecture"
   },
   "next": {
     "title": "Robot Control",
-    "permalink": "/module3/robot-control"
+    "permalink": "/physical-ai-humanoid-robotics/module3/robot-control"
   }
 }

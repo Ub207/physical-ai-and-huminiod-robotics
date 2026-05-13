@@ -5,7 +5,7 @@
   "source": "@site/docs/capstone/introduction.md",
   "sourceDirName": "capstone",
   "slug": "/capstone/introduction",
-  "permalink": "/capstone/introduction",
+  "permalink": "/physical-ai-humanoid-robotics/capstone/introduction",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -27,10 +27,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "VLA Exercises",
-    "permalink": "/module4/vla-exercises"
+    "permalink": "/physical-ai-humanoid-robotics/module4/vla-exercises"
   },
   "next": {
     "title": "Capstone Project Requirements",
-    "permalink": "/capstone/project-requirements"
+    "permalink": "/physical-ai-humanoid-robotics/capstone/project-requirements"
   }
 }

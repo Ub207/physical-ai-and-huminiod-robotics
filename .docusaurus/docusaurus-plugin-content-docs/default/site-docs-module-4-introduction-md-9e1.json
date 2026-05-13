@@ -5,7 +5,7 @@
   "source": "@site/docs/module4/introduction.md",
   "sourceDirName": "module4",
   "slug": "/module4/introduction",
-  "permalink": "/module4/introduction",
+  "permalink": "/physical-ai-humanoid-robotics/module4/introduction",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Robot Control",
-    "permalink": "/module3/robot-control"
+    "permalink": "/physical-ai-humanoid-robotics/module3/robot-control"
   },
   "next": {
     "title": "VLA Models",
-    "permalink": "/module4/vla-models"
+    "permalink": "/physical-ai-humanoid-robotics/module4/vla-models"
   }
 }

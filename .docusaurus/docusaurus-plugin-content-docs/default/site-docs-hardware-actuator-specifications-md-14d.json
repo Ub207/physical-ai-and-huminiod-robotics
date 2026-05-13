@@ -5,7 +5,7 @@
   "source": "@site/docs/hardware/actuator-specifications.md",
   "sourceDirName": "hardware",
   "slug": "/hardware/actuator-specifications",
-  "permalink": "/hardware/actuator-specifications",
+  "permalink": "/physical-ai-humanoid-robotics/hardware/actuator-specifications",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Sensor Specifications",
-    "permalink": "/hardware/sensor-specifications"
+    "permalink": "/physical-ai-humanoid-robotics/hardware/sensor-specifications"
   },
   "next": {
     "title": "Local Setup Architecture",
-    "permalink": "/lab-architecture/local-setup"
+    "permalink": "/physical-ai-humanoid-robotics/lab-architecture/local-setup"
   }
 }

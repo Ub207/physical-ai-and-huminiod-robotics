@@ -56,18 +56,22 @@ Index book content into the Qdrant vector database.
 Start the FastAPI backend server for the RAG chatbot.
 
 **What it does:**
-- Checks port availability (default: 8001)
+- Checks port availability (default: 8000)
 - Starts uvicorn server with hot reload
 - Enables CORS for frontend
 - Exposes API endpoints and documentation
 
 **Usage:**
 ```bash
-# Start on default port 8001
+# Start on default port 8000
 /rag.start
 
 # Start on custom port
 /rag.start 8080
+
+# Or use the startup script
+./start-server.sh    # Mac/Linux
+start-server.bat     # Windows
 ```
 
 **When to use:**
@@ -76,9 +80,9 @@ Start the FastAPI backend server for the RAG chatbot.
 - After making code changes (auto-reloads)
 
 **Endpoints:**
-- API Docs: http://localhost:8001/docs
-- Health Check: http://localhost:8001/health
-- Query: POST http://localhost:8001/query
+- API Docs: http://localhost:8000/docs
+- Health Check: http://localhost:8000/health
+- Query: POST http://localhost:8000/query
 
 ---
 
@@ -147,6 +151,7 @@ Run comprehensive tests on the RAG chatbot system.
 ---
 
 ### 6. `/rag.deploy` - Deploy to Cloud
+
 Deploy the RAG chatbot backend to cloud platforms.
 
 **What it does:**
@@ -247,7 +252,17 @@ cd D:/physical-ai and huminiod-robotics
 ### Backend Won't Start
 Check if port is in use:
 ```bash
-netstat -ano | findstr :8001
+# Windows
+netstat -ano | findstr :8000
+
+# Mac/Linux
+lsof -ti:8000
+```
+
+Use the startup script for automatic checks:
+```bash
+./start-server.sh    # Mac/Linux
+start-server.bat     # Windows
 ```
 
 ### Low Confidence Scores
@@ -318,8 +333,10 @@ Typical performance metrics:
 ## Notes
 
 - Keep `.env` file secure (never commit to git)
-- Backend must run on port 8001 for frontend integration
+- Backend runs on port 8000 by default (configured in api/main.py)
+- Frontend automatically detects localhost and uses port 8000
 - First query may be slower due to cold start
+- Use `start-server.bat` (Windows) or `start-server.sh` (Mac/Linux) for easy startup
 - Free tier limits:
   - Cohere: 100 requests/min
   - Qdrant: 1GB storage, 1M vectors

@@ -5,7 +5,7 @@
   "source": "@site/docs/weekly-breakdown/week-5-6.md",
   "sourceDirName": "weekly-breakdown",
   "slug": "/weekly-breakdown/week-5-6",
-  "permalink": "/weekly-breakdown/week-5-6",
+  "permalink": "/physical-ai-humanoid-robotics/weekly-breakdown/week-5-6",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Week 3-4: Robotic Nervous System (ROS 2)",
-    "permalink": "/weekly-breakdown/week-3-4"
+    "permalink": "/physical-ai-humanoid-robotics/weekly-breakdown/week-3-4"
   },
   "next": {
     "title": "Week 7-8: Unity Integration & Advanced Simulation",
-    "permalink": "/weekly-breakdown/week-7-8"
+    "permalink": "/physical-ai-humanoid-robotics/weekly-breakdown/week-7-8"
   }
 }

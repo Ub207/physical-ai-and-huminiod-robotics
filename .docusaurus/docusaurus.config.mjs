@@ -8,7 +8,7 @@ export default {
   "tagline": "The Agent-Native Future",
   "favicon": "img/favicon.ico",
   "url": "https://physical-robotics-pi.vercel.app",
-  "baseUrl": "/",
+  "baseUrl": "/physical-ai-humanoid-robotics/",
   "organizationName": "Ub207",
   "projectName": "physical-ai-and-huminiod-robotics",
   "onBrokenLinks": "warn",
@@ -38,6 +38,37 @@ export default {
   ],
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
+    "headTags": [
+      {
+        "tagName": "link",
+        "attributes": {
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        }
+      },
+      {
+        "tagName": "link",
+        "attributes": {
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": ""
+        }
+      },
+      {
+        "tagName": "link",
+        "attributes": {
+          "href": "https://fonts.googleapis.com/css2?family=Jameel+Noori+Nastaleeq&display=swap",
+          "rel": "stylesheet"
+        }
+      },
+      {
+        "tagName": "link",
+        "attributes": {
+          "href": "https://fonts.googleapis.com/css2?family=Lateef:wght@400;700&display=swap",
+          "rel": "stylesheet"
+        }
+      }
+    ],
     "navbar": {
       "title": "Physical AI & Humanoid Robotics",
       "logo": {
